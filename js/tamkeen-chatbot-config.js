@@ -2,5 +2,6 @@
    Deploy the included Supabase Edge Function, then replace the endpoint below.
    NEVER put an OpenAI API key in browser JavaScript. */
 window.TAMKEEN_CHATBOT = {
-  endpoint: "PASTE_YOUR_SUPABASE_EDGE_FUNCTION_URL_HERE",
+  endpoint:
+    "https://kaoaiavzeketgjprmhtv.supabase.co/functions/v1/tamkeen-chat",
 };
