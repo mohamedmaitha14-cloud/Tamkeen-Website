@@ -1,0 +1,1 @@
+Restoration: fixed course detail lookup so Yes/ADD statuses do not suppress the existing training topics, FAQs or editorial draft content. Preserved all source data files, catalog order, Advanced Artificial Intelligence, and existing website design. Previously sourced details take priority over drafts. Drafts are not verified official curricula.

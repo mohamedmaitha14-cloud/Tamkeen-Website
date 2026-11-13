@@ -1,0 +1,1 @@
+Translated the user-supplied Arabic article into English in news-labour-law.html. Historical legal assertions have not been verified. All other site pages copied unchanged from tamkeen_criminal_law_translated.

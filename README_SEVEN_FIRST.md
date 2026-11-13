@@ -1,0 +1,1 @@
+The seven previously accessible Tamkeen courses are placed immediately after Advanced Artificial Intelligence. Only js/program-catalog-data.js ordering changed. No course data, course IDs, or detail-page code was modified.

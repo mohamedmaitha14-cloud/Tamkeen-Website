@@ -1,0 +1,1 @@
+Media Center News updated using the publicly retrievable /News page. Source confirms four article categories but exposes no individual article records. Cards link to original /News page. No invented article titles, dates, or descriptions. Other files unchanged.

@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#0a1931" name="theme-color" />
+    <title>Human Rights | Tamkeen News</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .news-source-section {
+        padding: 70px 5% 90px;
+        background: #f6fafd;
+        color: #0a1931;
+      }
+      .news-source-inner {
+        max-width: 1220px;
+        margin: auto;
+      }
+      .news-source-kicker {
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        font-weight: 800;
+        color: #4a7fa7;
+      }
+      .news-source-inner h2 {
+        font-size: clamp(30px, 4vw, 48px);
+        margin: 12px 0;
+        color: #0a1931;
+      }
+      .news-source-inner > p:not(.news-source-kicker) {
+        max-width: 750px;
+        color: #37526b;
+        line-height: 1.75;
+      }
+      .news-category-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+      .news-category-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 230px;
+        padding: 25px;
+        border: 1px solid #d7e5ef;
+        border-radius: 18px;
+        background: white;
+        color: #0a1931;
+        text-decoration: none;
+        box-shadow: 0 8px 28px rgba(10, 25, 49, 0.04);
+        transition:
+          transform 0.2s,
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .news-category-card:hover,
+      .news-category-card:focus-visible {
+        transform: translateY(-5px);
+        border-color: #4a7fa7;
+        box-shadow: 0 14px 30px rgba(10, 25, 49, 0.12);
+        outline-offset: 3px;
+      }
+      .news-card-number {
+        color: #4a7fa7;
+        font-weight: 800;
+        font-size: 13px;
+      }
+      .news-category-card h3 {
+        font-size: 21px;
+        line-height: 1.3;
+        margin: 22px 0 6px;
+        color: #0a1931;
+      }
+      .news-category-card p {
+        font-size: 14px;
+        color: #516b80;
+        margin: 0 0 18px;
+      }
+      .news-card-arrow {
+        font-weight: 700;
+        color: #1a3d63;
+        margin-top: auto;
+      }
+      @media (max-width: 900px) {
+        .news-category-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 550px) {
+        .news-category-grid {
+          grid-template-columns: 1fr;
+        }
+        .news-source-section {
+          padding: 45px 5% 65px;
+        }
+        .news-category-card {
+          min-height: 175px;
+        }
+      }
+    </style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .media-section-tabs {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        align-items: center;
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 34px 24px;
+        background: #f6fafd;
+      }
+      .media-section-tabs a {
+        display: block;
+        padding: 15px 8px;
+        text-align: center;
+        color: #123b62;
+        text-decoration: none;
+        font-size: clamp(13px, 1.5vw, 23px);
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        border-bottom: 3px solid transparent;
+        transition:
+          color 0.2s,
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .media-section-tabs a:hover,
+      .media-section-tabs a:focus-visible {
+        color: #2478b0;
+        border-color: #2478b0;
+        background: #e9f3fb;
+        outline-offset: 3px;
+      }
+      .media-section-tabs a[aria-current="location"] {
+        color: #1a6699;
+        border-color: #1a6699;
+      }
+      .media-anchor-section {
+        scroll-margin-top: 105px;
+      }
+      .media-extra-section {
+        padding: 72px max(5%, calc((100% - 1220px) / 2));
+        background: #fff;
+        color: #0a1931;
+        border-top: 1px solid #dce9f2;
+      }
+      .media-extra-section:nth-of-type(even) {
+        background: #f6fafd;
+      }
+      .media-extra-section h2 {
+        font-size: clamp(30px, 4vw, 46px);
+        margin: 10px 0 16px;
+      }
+      .media-extra-section p {
+        max-width: 750px;
+        color: #37526b;
+        line-height: 1.8;
+      }
+      .media-extra-section .media-kicker {
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        font-weight: 800;
+        color: #4a7fa7;
+      }
+      #tamkeen-news {
+        scroll-margin-top: 105px;
+      }
+      @media (max-width: 650px) {
+        .media-section-tabs {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 4px;
+          padding: 20px 12px;
+        }
+        .media-section-tabs a {
+          font-size: 13px;
+          letter-spacing: 0.08em;
+          padding: 14px 4px;
+        }
+        .media-extra-section {
+          padding: 50px 6%;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+    <style>
+      .news-article-layout {
+        min-height: 65vh;
+        background: #f6fafd;
+        padding: 85px 6% 110px;
+        color: #0a1931;
+      }
+      .news-article-container {
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      .news-back {
+        display: inline-block;
+        color: #1a3d63;
+        font-weight: 800;
+        text-decoration: none;
+        margin-bottom: 42px;
+      }
+      .news-back:hover,
+      .news-back:focus-visible {
+        color: #4a7fa7;
+        text-decoration: underline;
+      }
+      .news-article-tag {
+        font-size: 13px;
+        letter-spacing: 0.15em;
+        font-weight: 800;
+        color: #4a7fa7;
+      }
+      .news-article-layout h1 {
+        font-size: clamp(32px, 5vw, 60px);
+        line-height: 1.15;
+        margin: 18px 0 44px;
+      }
+      .news-article-notice {
+        background: #fff;
+        border: 1px solid #d7e5ef;
+        border-left: 5px solid #4a7fa7;
+        border-radius: 14px;
+        padding: 30px 35px;
+        margin-bottom: 35px;
+        box-shadow: 0 8px 28px rgba(10, 25, 49, 0.05);
+      }
+      .news-article-notice h2 {
+        font-size: 23px;
+        color: #0a1931;
+      }
+      .news-article-notice p {
+        color: #37526b;
+        line-height: 1.8;
+      }
+      @media (max-width: 600px) {
+        .news-article-layout {
+          padding: 55px 5% 70px;
+        }
+        .news-article-notice {
+          padding: 22px;
+        }
+      }
+    </style>
+    <style>
+      .translated-article {
+        font-size: 17px;
+        line-height: 1.85;
+        color: #37526b;
+      }
+      .translated-article > p {
+        margin: 0 0 22px;
+      }
+      .translated-article .article-lead {
+        font-size: clamp(23px, 3vw, 32px);
+        font-weight: 800;
+        color: #1a3d63;
+        line-height: 1.4;
+        margin-bottom: 25px;
+      }
+      .translated-article h2 {
+        font-size: clamp(22px, 2.5vw, 29px);
+        line-height: 1.35;
+        color: #0a1931;
+        margin: 44px 0 16px;
+        padding-top: 8px;
+        border-top: 1px solid #d7e5ef;
+      }
+      .translated-article h3 {
+        font-size: 19px;
+        color: #1a3d63;
+        margin: 24px 0 10px;
+      }
+      .translated-article ul {
+        padding-left: 27px;
+        margin: 10px 0 26px;
+      }
+      .translated-article li {
+        margin: 7px 0;
+      }
+      .translated-article .article-story,
+      .translated-article .article-action,
+      .translated-article .article-fact {
+        padding: 21px 25px;
+        border-radius: 14px;
+        background: #fff;
+        border-left: 4px solid #4a7fa7;
+        margin: 25px 0;
+        box-shadow: 0 5px 18px rgba(10, 25, 49, 0.04);
+      }
+      .translated-article .article-story p {
+        margin: 7px 0 0;
+      }
+      .translated-article strong {
+        color: #0a1931;
+      }
+    </style>
+    <link href="css/tamkeen-chatbot.css" rel="stylesheet" />
+  </head>
+  <body data-page="media">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img
+          alt="Tamkeen Training Center logo"
+          class="tamkeen-logo-header"
+          src="assets/tamkeen-official-logo.png"
+        />
+      </a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a data-nav="home" href="index.html"> Home </a>
+        <a data-nav="about" href="about.html"> About </a>
+        <a data-nav="programs" href="programs.html"> Programs </a>
+        <a data-nav="certificate" href="certificate.html">
+          Verify a certificate
+        </a>
+      </nav>
+      <div class="header-tools">
+        <button
+          aria-label="Search programs"
+          class="header-search"
+          id="searchBtn"
+        >
+          <span> Search programs </span>
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+        </button>
+        <a aria-label="Login" class="tool" href="login.html" title="Login">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M4.5 21c.4-4.3 3-6.5 7.5-6.5s7.1 2.2 7.5 6.5"></path>
+          </svg>
+        </a>
+        <button
+          aria-label="Shopping cart"
+          class="tool cart"
+          id="cartBtn"
+          title="Shopping cart"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M3 4h2l2.3 11h11.2l2-8H6"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+          <span id="cartCount"> 0 </span>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="tool"
+          id="menuBtn"
+          title="Menu"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+        <a class="contact-cta" href="contact.html">
+          Contact Us
+          <span> ↗ </span>
+        </a>
+      </div>
+    </header>
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+    <aside
+      aria-hidden="true"
+      aria-label="Full website menu"
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+      <div class="drawer-head">
+        <a aria-label="Tamkeen homepage" class="drawer-brand" href="index.html">
+          <img
+            alt="Tamkeen Training Center logo"
+            class="tamkeen-logo-drawer"
+            src="assets/tamkeen-logo-drawer-transparent.png"
+          />
+        </a>
+        <button
+          aria-label="Close menu"
+          class="drawer-close"
+          id="menuClose"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="drawer-scroll">
+        <form class="drawer-search" id="drawerSearchForm">
+          <input
+            aria-label="Search programs"
+            autocomplete="off"
+            id="drawerSearchInput"
+            placeholder="Search programs..."
+          />
+          <button aria-label="Search" type="submit">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <circle cx="10.5" cy="10.5" r="6.5"></circle>
+              <path d="m15.5 15.5 5 5"></path>
+            </svg>
+          </button>
+        </form>
+        <div class="drawer-section-label">MENU</div>
+        <a class="drawer-link" data-menu-page="home" href="index.html">
+          <span aria-hidden="true" class="drawer-icon"> ⌂ </span>
+          <span class="drawer-link-text"> Home </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="about" href="about.html">
+          <span aria-hidden="true" class="drawer-icon"> ⓘ </span>
+          <span class="drawer-link-text"> About Tamkeen </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="programs" href="programs.html">
+          <span aria-hidden="true" class="drawer-icon"> ▤ </span>
+          <span class="drawer-link-text"> All training programs </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-menu-page="certificate"
+          href="certificate.html"
+        >
+          <span aria-hidden="true" class="drawer-icon"> ▦ </span>
+          <span class="drawer-link-text"> Verify a certificate </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="family" href="family.html">
+          <span aria-hidden="true" class="drawer-icon"> ♧ </span>
+          <span class="drawer-link-text"> Tamkeen family </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link active" data-menu-page="media" href="media.html">
+          <span aria-hidden="true" class="drawer-icon"> ▷ </span>
+          <span class="drawer-link-text"> Media center </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="gallery" href="gallery.html">
+          <span aria-hidden="true" class="drawer-icon"> ▧ </span>
+          <span class="drawer-link-text"> Photo gallery </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <div class="drawer-section-label drawer-quick">QUICK LINKS</div>
+        <a class="drawer-link" data-menu-page="contact" href="contact.html">
+          <span aria-hidden="true" class="drawer-icon"> ✉ </span>
+          <span class="drawer-link-text"> Contact us </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="login" href="login.html">
+          <span aria-hidden="true" class="drawer-icon"> ♙ </span>
+          <span class="drawer-link-text"> My account </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-drawer-cart="true"
+          data-menu-page="cart"
+          href="#cart"
+        >
+          <span aria-hidden="true" class="drawer-icon"> 🛒 </span>
+          <span class="drawer-link-text"> Cart </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+      </div>
+      <div class="drawer-bottom">
+        <div class="drawer-contact-row">
+          <a href="contact.html"> ☎   Call us </a>
+          <a href="contact.html"> ✉   Email </a>
+        </div>
+        <div class="drawer-languages">
+          <button data-lang="ar" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United Arab Emirates flag" src="assets/flag-uae.svg" />
+            </span>
+            <span> عربي </span>
+          </button>
+          <button class="selected" data-lang="en" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United States flag" src="assets/flag-us.svg" />
+            </span>
+            <span> English </span>
+          </button>
+        </div>
+      </div>
+    </aside>
+    <div aria-hidden="true" class="search-layer" id="searchLayer">
+      <button class="close-layer" id="closeSearch">✕</button>
+      <p class="kicker">DISCOVER YOUR NEXT SKILL</p>
+      <label for="globalSearch"> What will you learn next? </label>
+      <input
+        autocomplete="off"
+        id="globalSearch"
+        placeholder="Search courses, skills, topics…"
+      />
+      <div id="searchResults"></div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside
+      aria-label="Your cart"
+      aria-modal="true"
+      class="cart-drawer"
+      id="cartDrawer"
+      role="dialog"
+    >
+      <div class="cart-panel-head">
+        <h2>
+          Your cart
+          <span id="cartHeadingCount"> (items: 0) </span>
+        </h2>
+        <button aria-label="Close cart" class="cart-x" id="closeCart">×</button>
+      </div>
+      <div class="cart-panel-items" id="cartItems"></div>
+      <div class="cart-panel-bottom">
+        <div class="cart-total">
+          <strong> Subtotal </strong>
+          <strong id="cartSubtotal"> AED 0.00 </strong>
+        </div>
+        <p class="cart-disclaimer">
+          Prices are indicative where available. Unpriced courses require a
+          quote; final fees must be confirmed with Tamkeen.
+        </p>
+        <div class="cart-actions">
+          <a class="cart-solid-btn" href="checkout.html"> Go to checkout </a>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section class="news-article-layout">
+        <div class="news-article-container">
+          <a class="news-back" href="media.html#media-news"> ← Back to News </a>
+          <div class="news-article-tag">TAMKEEN / NEWS / HUMAN RIGHTS</div>
+          <h1>Human Rights</h1>
+          <article class="translated-article">
+            <p class="article-lead">
+              Defending Human Dignity: A Call for Universal Rights
+            </p>
+            <p>
+              In a world where injustice and inequality persist, the struggle
+              for human rights remains more crucial than ever. From bustling
+              cities to remote villages, every individual deserves to live with
+              dignity, respect, and equal opportunities.
+            </p>
+            <p>
+              Today, we explore some of the most pressing human rights issues of
+              our time, examining the challenges faced by women, workers, people
+              experiencing homelessness, and orphans, while also considering the
+              state of our civil liberties.
+            </p>
+            <h2>
+              Women's Rights: Breaking Barriers and Shattering Glass Ceilings
+            </h2>
+            <p>
+              Despite significant progress, women around the world continue to
+              face discrimination and inequality. From unequal pay to limited
+              access to education, the road to gender equality remains long and
+              difficult.
+            </p>
+            <div class="article-story">
+              <strong> A personal story </strong>
+              <p>
+                Maria, a talented software engineer, recalls being passed over
+                for promotion several times in favour of less-qualified male
+                colleagues. “It felt as though I had hit an invisible wall,” she
+                said. “No matter how hard I worked, my gender seemed to be a
+                constant obstacle.”
+              </p>
+            </div>
+            <h3>Key Issues</h3>
+            <ul>
+              <li>The gender pay gap and discrimination in the workplace</li>
+              <li>Limited access to education in many regions</li>
+              <li>Violence against women and girls</li>
+              <li>Underrepresentation in leadership positions</li>
+            </ul>
+            <p class="article-action">
+              <strong> Take action: </strong>
+              Support organizations such as UN Women, which work tirelessly to
+              advance gender equality and empower women.
+            </p>
+            <h2>Workers' Rights: Dignity at Work</h2>
+            <p>
+              The struggle for fair working conditions and fair compensation
+              remains a global challenge. From unsafe workplaces to
+              exploitation, many workers face daily battles for their basic
+              rights.
+            </p>
+            <h3>Current Issues</h3>
+            <ul>
+              <li>Inadequate minimum wage laws</li>
+              <li>Lack of workplace safety regulations</li>
+              <li>Limited access to healthcare and benefits</li>
+              <li>
+                Restrictions on union organizing and collective bargaining
+              </li>
+            </ul>
+            <p class="article-fact">
+              <strong> Did you know? </strong>
+              According to the International Labour Organization, more than 2.3
+              million people die each year from work-related accidents or
+              illnesses.
+            </p>
+            <h2>
+              Rights of People Experiencing Homelessness: Dignity for the
+              Displaced
+            </h2>
+            <p>
+              Homelessness is a global crisis that deprives individuals of their
+              fundamental human rights. From a lack of shelter to limited access
+              to healthcare and education, people experiencing homelessness face
+              numerous challenges in their daily lives.
+            </p>
+            <div class="article-story">
+              <strong> A personal story </strong>
+              <p>
+                John, a former teacher, found himself homeless after a series of
+                unfortunate events. “The hardest part wasn't just the lack of
+                shelter,” he recalls. “It was the feeling of being invisible, as
+                though I no longer mattered to society.”
+              </p>
+            </div>
+            <h3>Essential Issues</h3>
+            <ul>
+              <li>Lack of affordable housing</li>
+              <li>Limited access to healthcare and mental health services</li>
+              <li>Criminalization of homelessness in many areas</li>
+              <li>Discrimination and social stigma</li>
+            </ul>
+            <p class="article-action">
+              <strong> Make a difference: </strong>
+              Support local shelters and organizations working to provide
+              housing and support services to people experiencing homelessness
+              in your community.
+            </p>
+            <h2>Orphans' Rights: Protecting the Most Vulnerable</h2>
+            <p>
+              Children deprived of parental care are among the most vulnerable
+              members of society and often face numerous challenges and
+              violations of their rights.
+            </p>
+            <h3>Key Concerns</h3>
+            <ul>
+              <li>Limited access to education and healthcare</li>
+              <li>Risk of exploitation and abuse</li>
+              <li>Lack of emotional support and a family environment</li>
+              <li>Challenges in transitioning to independent living</li>
+            </ul>
+            <h2>Other Fundamental Human Rights</h2>
+            <p>There are many human rights, including:</p>
+            <ul>
+              <li>
+                <strong> Civil and political rights: </strong>
+                The rights to life, liberty, security, opinion and expression,
+                freedom of association, and participation in public affairs.
+              </li>
+              <li>
+                <strong> Economic, social and cultural rights: </strong>
+                The rights to work, housing, education, health, and social
+                security.
+              </li>
+            </ul>
+            <p>
+              There are many more issues that deserve detailed discussion, as
+              they involve important gaps affecting humanity. Every individual
+              has an important role to play in protecting and promoting human
+              rights.
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+              Human rights are a shared human heritage and a collective
+              responsibility of individuals, communities, and nations. We must
+              all work together to protect and promote these rights and build a
+              more just and equal world.
+            </p>
+          </article>
+          <a class="news-back" href="media.html#media-news">
+            ← View all news articles
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer compact-footer">
+      <div aria-hidden="true" class="footer-art"></div>
+      <div class="footer-content">
+        <div class="footer-row">
+          <div class="footer-brand">
+            <img
+              alt="Tamkeen Training Center logo"
+              class="tamkeen-logo-footer"
+              src="assets/tamkeen-footer-logo.png"
+            />
+            <p>Empowering minds. Shaping what’s next.</p>
+          </div>
+          <nav aria-label="Footer navigation" class="footer-nav">
+            <div class="footer-link-group">
+              <h3>Explore</h3>
+              <a href="index.html"> Home </a>
+              <a href="about.html"> About </a>
+              <a href="programs.html"> Programs </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Tamkeen</h3>
+              <a href="gallery.html"> Gallery </a>
+              <a href="media.html"> Media center </a>
+              <a href="family.html"> Our family </a>
+              <a href="certificate.html"> Verify a certificate </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Get in touch</h3>
+              <a href="contact.html"> Dubai &amp; Ajman </a>
+              <a href="tel:+971505057160"> +971 50 505 7160 </a>
+              <a href="contact.html"> Email us </a>
+              <a href="contact.html"> Support </a>
+              <a href="contact.html"> Complaints </a>
+            </div>
+          </nav>
+        </div>
+        <div aria-label="Social media" class="footer-social">
+          <a
+            aria-label="Instagram"
+            data-placeholder="ADD YOUR INSTAGRAM LINK HERE"
+            href="#"
+            title="Instagram"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/instagram.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="WhatsApp"
+            href="https://wa.me/971505057160"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="WhatsApp"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/whatsapp.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="TikTok"
+            data-placeholder="ADD YOUR TIKTOK LINK HERE"
+            href="#"
+            title="TikTok"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/tiktok.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="Facebook"
+            data-placeholder="ADD YOUR FACEBOOK LINK HERE"
+            href="#"
+            title="Facebook"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/facebook.svg"
+              width="24"
+            />
+          </a>
+        </div>
+        <p class="footer-note">
+          <span> © Tamkeen Training Center · Concept redesign </span>
+          <span class="footer-legal-links">
+            <a href="#"> Privacy </a>
+            ·
+            <a href="refund-policy.html"> Refund policy </a>
+            ·
+            <a href="contact.html"> Contact </a>
+          </span>
+        </p>
+      </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      /* A fresh Programs navigation clears saved filters; browser Back retains catalog position. */
+      document.addEventListener(
+        "click",
+        function (event) {
+          var link = event.target.closest("a[href]");
+          if (!link) return;
+          try {
+            var target = new URL(link.href, location.href);
+            if (
+              target.origin === location.origin &&
+              /\/programs\.html$/.test(target.pathname) &&
+              !target.search
+            ) {
+              sessionStorage.setItem("tamkeen-programs-explicit-reset", "1");
+            }
+          } catch (e) {}
+        },
+        true,
+      );
+    </script>
+    <script src="js/program-catalog-data.js"></script>
+    <script src="js/tamkeen-chatbot-config.js"></script>
+    <script defer="" src="js/tamkeen-chatbot.js"></script>
+  </body>
+</html>

@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#0a1931" name="theme-color" />
+    <title>Course Details | Tamkeen Training</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/tamkeen-chatbot.css" rel="stylesheet" />
+  </head>
+  <body data-page="course-details">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img
+          alt="Tamkeen Training Center logo"
+          class="tamkeen-logo-header"
+          src="assets/tamkeen-official-logo.png"
+        />
+      </a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a data-nav="home" href="index.html"> Home </a>
+        <a data-nav="about" href="about.html"> About </a>
+        <a data-nav="programs" href="programs.html"> Programs </a>
+        <a data-nav="certificate" href="certificate.html">
+          Verify a certificate
+        </a>
+      </nav>
+      <div class="header-tools">
+        <button
+          aria-label="Search programs"
+          class="header-search"
+          id="searchBtn"
+        >
+          <span> Search programs </span>
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+        </button>
+        <a aria-label="Login" class="tool" href="login.html" title="Login">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M4.5 21c.4-4.3 3-6.5 7.5-6.5s7.1 2.2 7.5 6.5"></path>
+          </svg>
+        </a>
+        <button
+          aria-label="Shopping cart"
+          class="tool cart"
+          id="cartBtn"
+          title="Shopping cart"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M3 4h2l2.3 11h11.2l2-8H6"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+          <span id="cartCount"> 0 </span>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="tool"
+          id="menuBtn"
+          title="Menu"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+        <a class="contact-cta" href="contact.html">
+          Contact Us
+          <span> ↗ </span>
+        </a>
+      </div>
+    </header>
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+    <aside
+      aria-hidden="true"
+      aria-label="Full website menu"
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+      <div class="drawer-head">
+        <a aria-label="Tamkeen homepage" class="drawer-brand" href="index.html">
+          <img
+            alt="Tamkeen Training Center logo"
+            class="tamkeen-logo-drawer"
+            src="assets/tamkeen-logo-drawer-transparent.png"
+          />
+        </a>
+        <button
+          aria-label="Close menu"
+          class="drawer-close"
+          id="menuClose"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="drawer-scroll">
+        <form class="drawer-search" id="drawerSearchForm">
+          <input
+            aria-label="Search programs"
+            autocomplete="off"
+            id="drawerSearchInput"
+            placeholder="Search programs..."
+          />
+          <button aria-label="Search" type="submit">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <circle cx="10.5" cy="10.5" r="6.5"></circle>
+              <path d="m15.5 15.5 5 5"></path>
+            </svg>
+          </button>
+        </form>
+        <div class="drawer-section-label">MENU</div>
+        <a class="drawer-link" data-menu-page="home" href="index.html">
+          <span aria-hidden="true" class="drawer-icon"> ⌂ </span>
+          <span class="drawer-link-text"> Home </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="about" href="about.html">
+          <span aria-hidden="true" class="drawer-icon"> ⓘ </span>
+          <span class="drawer-link-text"> About Tamkeen </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="programs" href="programs.html">
+          <span aria-hidden="true" class="drawer-icon"> ▤ </span>
+          <span class="drawer-link-text"> All training programs </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-menu-page="certificate"
+          href="certificate.html"
+        >
+          <span aria-hidden="true" class="drawer-icon"> ▦ </span>
+          <span class="drawer-link-text"> Verify a certificate </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="family" href="family.html">
+          <span aria-hidden="true" class="drawer-icon"> ♧ </span>
+          <span class="drawer-link-text"> Tamkeen family </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="media" href="media.html">
+          <span aria-hidden="true" class="drawer-icon"> ▷ </span>
+          <span class="drawer-link-text"> Media center </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="gallery" href="gallery.html">
+          <span aria-hidden="true" class="drawer-icon"> ▧ </span>
+          <span class="drawer-link-text"> Photo gallery </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <div class="drawer-section-label drawer-quick">QUICK LINKS</div>
+        <a class="drawer-link" data-menu-page="contact" href="contact.html">
+          <span aria-hidden="true" class="drawer-icon"> ✉ </span>
+          <span class="drawer-link-text"> Contact us </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="login" href="login.html">
+          <span aria-hidden="true" class="drawer-icon"> ♙ </span>
+          <span class="drawer-link-text"> My account </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-drawer-cart="true"
+          data-menu-page="cart"
+          href="#cart"
+        >
+          <span aria-hidden="true" class="drawer-icon"> 🛒 </span>
+          <span class="drawer-link-text"> Cart </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+      </div>
+      <div class="drawer-bottom">
+        <div class="drawer-contact-row">
+          <a href="contact.html"> ☎   Call us </a>
+          <a href="contact.html"> ✉   Email </a>
+        </div>
+        <div class="drawer-languages">
+          <button data-lang="ar" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United Arab Emirates flag" src="assets/flag-uae.svg" />
+            </span>
+            <span> عربي </span>
+          </button>
+          <button class="selected" data-lang="en" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United States flag" src="assets/flag-us.svg" />
+            </span>
+            <span> English </span>
+          </button>
+        </div>
+      </div>
+    </aside>
+    <div aria-hidden="true" class="search-layer" id="searchLayer">
+      <button class="close-layer" id="closeSearch">✕</button>
+      <p class="kicker">DISCOVER YOUR NEXT SKILL</p>
+      <label for="globalSearch"> What will you learn next? </label>
+      <input
+        autocomplete="off"
+        id="globalSearch"
+        placeholder="Search courses, skills, topics…"
+      />
+      <div id="searchResults"></div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside
+      aria-label="Your cart"
+      aria-modal="true"
+      class="cart-drawer"
+      id="cartDrawer"
+      role="dialog"
+    >
+      <div class="cart-panel-head">
+        <h2>
+          Your cart
+          <span id="cartHeadingCount"> (items: 0) </span>
+        </h2>
+        <button aria-label="Close cart" class="cart-x" id="closeCart">×</button>
+      </div>
+      <div class="cart-panel-items" id="cartItems"></div>
+      <div class="cart-panel-bottom">
+        <div class="cart-total">
+          <strong> Subtotal </strong>
+          <strong id="cartSubtotal"> AED 0.00 </strong>
+        </div>
+        <p class="cart-disclaimer">
+          Prices are indicative where available. Unpriced courses require a
+          quote; final fees must be confirmed with Tamkeen.
+        </p>
+        <div class="cart-actions">
+          <a class="cart-solid-btn" href="checkout.html"> Go to checkout </a>
+        </div>
+      </div>
+    </aside>
+    <main class="detail-v2">
+      <section class="dv-hero">
+        <div class="dv-hero-copy">
+          <a class="dv-back" href="programs.html"> ← All programs </a>
+          <div class="dv-kicker">EXPLORE YOUR NEXT SKILL</div>
+          <div class="dv-departments" id="dvDepartments">
+            <span> Management </span>
+            <span> AI </span>
+          </div>
+          <h1 id="cdTitle">
+            Procurement Management Using Artificial Intelligence
+          </h1>
+          <p id="cdIntro">
+            Tamkeen’s 120-hour programme covers AI-assisted procurement, spend
+            analysis, demand forecasting, supplier evaluation, e-sourcing,
+            data-driven negotiation, contract analysis, supply-chain risks,
+            sustainable procurement, governance and a procurement transformation
+            project.
+          </p>
+          <div class="dv-effects" id="dvEffects">
+            <span class="dv-effect"> ✦ Practical learning </span>
+            <span class="dv-effect"> ◉ Online &amp; in person </span>
+            <span class="dv-effect"> ⌁ Dubai &amp; Ajman </span>
+          </div>
+          <div class="dv-hero-actions">
+            <a class="dv-button" href="contact.html" id="dvBook">
+              Enquire now ↗
+            </a>
+            <a class="dv-button-ghost" href="#dv-content">
+              Explore curriculum ↓
+            </a>
+          </div>
+        </div>
+        <div class="dv-hero-visual">
+          <img
+            alt="Procurement Management Using Artificial Intelligence"
+            id="cdImage"
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1100&amp;auto=format&amp;fit=crop&amp;q=85"
+          />
+          <div class="dv-visual-label">
+            YOUR NEXT CHAPTER STARTS HERE
+            <span> ✦ </span>
+          </div>
+        </div>
+      </section>
+      <section aria-label="Program details" class="dv-facts">
+        <div>
+          <small> STUDY MODE </small>
+          <strong> Online &amp; in person </strong>
+        </div>
+        <div>
+          <small> LOCATION </small>
+          <strong> Dubai · Ajman </strong>
+        </div>
+        <div>
+          <small> LANGUAGE </small>
+          <strong id="dvLanguage"> Enquire for details </strong>
+        </div>
+        <div>
+          <small> PROGRAM FEE </small>
+          <strong id="cdPrice"> 3100 AED </strong>
+          <small id="dvOldPrice"> </small>
+        </div>
+        <div>
+          <small> CERTIFICATES </small>
+          <strong> 4 </strong>
+        </div>
+      </section>
+      <div class="dv-layout" id="dv-content">
+        <div class="dv-content">
+          <nav aria-label="Program sections" class="dv-tabs" id="dvTabs">
+            <a href="#dv-about"> Overview </a>
+            <a href="#dv-topics"> Training topics </a>
+            <a href="#dv-objectives"> Objectives </a>
+            <a href="#dv-audience"> Who is it for? </a>
+            <a href="#dv-certificates"> Certificates </a>
+            <a href="#dv-faq"> FAQs </a>
+          </nav>
+          <section class="dv-section" id="dv-about">
+            <span class="dv-section-kicker"> ABOUT THE PROGRAM </span>
+            <h2>Learn more about this program</h2>
+            <p id="cdOverview">
+              Tamkeen’s 120-hour programme covers AI-assisted procurement, spend
+              analysis, demand forecasting, supplier evaluation, e-sourcing,
+              data-driven negotiation, contract analysis, supply-chain risks,
+              sustainable procurement, governance and a procurement
+              transformation project.
+            </p>
+          </section>
+          <div id="dvSections">
+            <section class="dv-section" id="dv-topics">
+              <span class="dv-section-kicker"> WHAT YOU WILL LEARN </span>
+              <h2>Training topics</h2>
+              <details class="dv-topic" open="">
+                <summary>
+                  <span class="dv-number"> 01 </span>
+                  <span> The procurement foundation, cycle and AI’s role </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Explain the main concepts and use cases behind the
+                      procurement foundation, cycle and ai’s role
+                    </li>
+                    <li>
+                      Select suitable AI methods, data inputs and tools for the
+                      task
+                    </li>
+                    <li>
+                      Practise a relevant example and evaluate reliability,
+                      privacy and limitations
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 02 </span>
+                  <span> Spend analysis and classification with AI </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Explain the main concepts and use cases behind spend
+                      analysis and classification with ai
+                    </li>
+                    <li>
+                      Select suitable AI methods, data inputs and tools for the
+                      task
+                    </li>
+                    <li>
+                      Practise a relevant example and evaluate reliability,
+                      privacy and limitations
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 03 </span>
+                  <span> Demand management, planning and forecasting </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Understand the essential principles and terminology of
+                      demand management, planning and forecasting
+                    </li>
+                    <li>
+                      Explore methods, tools and examples relevant to demand
+                      management, planning and forecasting
+                    </li>
+                    <li>
+                      Apply the learning to a realistic workplace scenario and
+                      review the results
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 04 </span>
+                  <span> Supplier selection and evaluation </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Map the key stages and responsibilities for supplier
+                      selection and evaluation
+                    </li>
+                    <li>
+                      Compare practical approaches using a supplier or
+                      purchasing scenario
+                    </li>
+                    <li>
+                      Evaluate cost, compliance, performance and improvement
+                      opportunities
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 05 </span>
+                  <span> E-sourcing and smart tenders </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Map the key stages and responsibilities for e-sourcing and
+                      smart tenders
+                    </li>
+                    <li>
+                      Compare practical approaches using a supplier or
+                      purchasing scenario
+                    </li>
+                    <li>
+                      Evaluate cost, compliance, performance and improvement
+                      opportunities
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 06 </span>
+                  <span> Data-driven negotiation </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Define the data and performance indicators needed for
+                      data-driven negotiation
+                    </li>
+                    <li>
+                      Interpret sample results using an appropriate analytical
+                      approach
+                    </li>
+                    <li>
+                      Present conclusions and recommend evidence-based
+                      improvements
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 07 </span>
+                  <span> Contract management and analysis with AI </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Explain the main concepts and use cases behind contract
+                      management and analysis with ai
+                    </li>
+                    <li>
+                      Select suitable AI methods, data inputs and tools for the
+                      task
+                    </li>
+                    <li>
+                      Practise a relevant example and evaluate reliability,
+                      privacy and limitations
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 08 </span>
+                  <span> Supply chain and inventory </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Explain the main concepts and use cases behind supply
+                      chain and inventory
+                    </li>
+                    <li>
+                      Select suitable AI methods, data inputs and tools for the
+                      task
+                    </li>
+                    <li>
+                      Practise a relevant example and evaluate reliability,
+                      privacy and limitations
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 09 </span>
+                  <span> Supply and supplier risk </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Identify common threats, risks and warning signs relating
+                      to supply and supplier risk
+                    </li>
+                    <li>
+                      Apply prevention, monitoring and response methods to a
+                      practical scenario
+                    </li>
+                    <li>
+                      Document findings, controls and recommended corrective
+                      actions
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 10 </span>
+                  <span> Sustainable and responsible procurement </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Explain the main concepts and use cases behind sustainable
+                      and responsible procurement
+                    </li>
+                    <li>
+                      Select suitable AI methods, data inputs and tools for the
+                      task
+                    </li>
+                    <li>
+                      Practise a relevant example and evaluate reliability,
+                      privacy and limitations
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 11 </span>
+                  <span> Compliance, governance and ethics </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Understand the essential principles and terminology of
+                      compliance, governance and ethics
+                    </li>
+                    <li>
+                      Explore methods, tools and examples relevant to
+                      compliance, governance and ethics
+                    </li>
+                    <li>
+                      Apply the learning to a realistic workplace scenario and
+                      review the results
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details class="dv-topic">
+                <summary>
+                  <span class="dv-number"> 12 </span>
+                  <span>
+                    Automation and a procurement transformation project
+                  </span>
+                  <span class="dv-plus"> + </span>
+                </summary>
+                <div class="dv-topic-body">
+                  <ul>
+                    <li>
+                      Identify the scope, requirements and success measures for
+                      automation and a procurement transformation project
+                    </li>
+                    <li>
+                      Work through a realistic project scenario using
+                      appropriate tools
+                    </li>
+                    <li>
+                      Review deliverables, performance indicators and
+                      improvement actions
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </section>
+            <section class="dv-section" id="dv-objectives">
+              <span class="dv-section-kicker"> LEARNING GOALS </span>
+              <h2>Program objectives</h2>
+              <ul class="dv-list">
+                <li>Analyse procurement spend and identify savings.</li>
+                <li>Forecast demand and evaluate suppliers using data.</li>
+                <li>Use market analysis to support negotiation.</li>
+                <li>Analyse contracts, inventory and supply risks.</li>
+                <li>
+                  Apply sustainable procurement and governance principles.
+                </li>
+                <li>Design a procurement transformation plan.</li>
+              </ul>
+            </section>
+            <section class="dv-section" id="dv-audience">
+              <span class="dv-section-kicker"> WHO SHOULD JOIN </span>
+              <h2>Who is it for?</h2>
+              <ul class="dv-list">
+                <li>Procurement and sourcing managers</li>
+                <li>Contract and supply-chain specialists</li>
+                <li>Warehouse and inventory officers</li>
+                <li>Finance and government procurement staff</li>
+                <li>Business owners and management graduates</li>
+              </ul>
+            </section>
+            <section class="dv-section" id="dv-certificates">
+              <span class="dv-section-kicker"> RECOGNITION </span>
+              <h2>Certificates</h2>
+              <ul class="dv-list">
+                <li>Tamkeen Training Centre certificate</li>
+                <li>Dubai branch certificate</li>
+                <li>Cambridge College certificate</li>
+                <li>Cambridge College membership card</li>
+              </ul>
+            </section>
+            <section class="dv-section" id="dv-faq">
+              <span class="dv-section-kicker"> COMMON QUESTIONS </span>
+              <h2>Frequently asked questions</h2>
+              <details class="dv-faq">
+                <summary>Is prior procurement experience required? +</summary>
+                <p>
+                  No. the course information says the programme builds
+                  procurement foundations before integrating AI.
+                </p>
+              </details>
+              <details class="dv-faq">
+                <summary>Does it cover spend analysis? +</summary>
+                <p>
+                  Yes. The curriculum covers collecting, classifying and
+                  analysing spend to identify savings.
+                </p>
+              </details>
+              <details class="dv-faq">
+                <summary>Does it cover negotiation? +</summary>
+                <p>
+                  Yes. Data-driven negotiation and market-price analysis are
+                  included.
+                </p>
+              </details>
+              <details class="dv-faq">
+                <summary>Does it cover sustainable procurement? +</summary>
+                <p>
+                  Yes. Supplier sustainability and responsible purchasing form a
+                  dedicated module.
+                </p>
+              </details>
+              <details class="dv-faq">
+                <summary>How long is the programme? +</summary>
+                <p>the course information specifies 120 training hours.</p>
+              </details>
+            </section>
+          </div>
+          <section class="dv-section dv-why">
+            <span class="dv-section-kicker"> WHY CHOOSE TAMKEEN </span>
+            <h2>Learning designed for real progress.</h2>
+            <div class="dv-why-grid">
+              <div>
+                <b> 01 </b>
+                <strong> Practical approach </strong>
+                <p>Learning experiences focused on useful skills.</p>
+              </div>
+              <div>
+                <b> 02 </b>
+                <strong> Flexible learning </strong>
+                <p>Explore online and in-person options.</p>
+              </div>
+              <div>
+                <b> 03 </b>
+                <strong> Support when you need it </strong>
+                <p>Contact our team for enrollment and program details.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <aside class="dv-sidebar">
+          <div class="dv-sticky dv-booking-card">
+            <div class="dv-booking-image">
+              <img
+                alt="Procurement Management Using Artificial Intelligence"
+                id="dvBookingImage"
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1100&amp;auto=format&amp;fit=crop&amp;q=85"
+              />
+              <span class="dv-booking-image-label"> TAMKEEN TRAINING </span>
+            </div>
+            <div class="dv-booking-body">
+              <span class="dv-side-kicker"> YOUR PROGRAM </span>
+              <h2 id="cdShortTitle">
+                Procurement Management Using Artificial Intelligence
+              </h2>
+              <div class="dv-departments" id="dvSideTags">
+                <span> Management </span>
+                <span> AI </span>
+              </div>
+              <div class="dv-booking-price">
+                <span> Program fee </span>
+                <strong id="dvSidePrice"> 3100 AED </strong>
+              </div>
+              <div class="dv-side-fact">
+                <span> Learning options </span>
+                <strong> Online · Dubai · Ajman </strong>
+              </div>
+              <div class="dv-side-fact">
+                <span> Departments </span>
+                <strong id="cdFactCategory"> Management, AI </strong>
+              </div>
+              <a
+                class="dv-button dv-wide dv-book-now"
+                href="checkout.html"
+                id="dvBookNow"
+              >
+                Book Now
+                <span aria-hidden="true"> ↗ </span>
+              </a>
+              <a
+                class="dv-button dv-wide dv-inquiry"
+                href="contact.html?program=Procurement%20Management%20Using%20Artificial%20Intelligence"
+                id="cdOfficial"
+              >
+                Inquiry
+                <span aria-hidden="true"> ↗ </span>
+              </a>
+              <a
+                aria-label="Ask Tamkeen about this course on WhatsApp"
+                class="course-whatsapp-button"
+                href="https://wa.me/971505057160"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  height="20"
+                  src="assets/social/whatsapp.svg"
+                  width="20"
+                />
+                Ask on WhatsApp
+              </a>
+              <p class="dv-source" id="cdSourceNote"></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <section class="dv-bottom">
+        <div>
+          <span> READY TO BEGIN? </span>
+          <h2>Make your next move count.</h2>
+        </div>
+        <a
+          class="dv-button dv-light"
+          href="contact.html?program=Procurement%20Management%20Using%20Artificial%20Intelligence"
+          id="dvBottomButton"
+        >
+          Ask about this course ↗
+        </a>
+      </section>
+    </main>
+    <footer class="site-footer compact-footer">
+      <div aria-hidden="true" class="footer-art"></div>
+      <div class="footer-content">
+        <div class="footer-row">
+          <div class="footer-brand">
+            <img
+              alt="Tamkeen Training Center logo"
+              class="tamkeen-logo-footer"
+              src="assets/tamkeen-footer-logo.png"
+            />
+            <p>Empowering minds. Shaping what’s next.</p>
+          </div>
+          <nav aria-label="Footer navigation" class="footer-nav">
+            <div class="footer-link-group">
+              <h3>Explore</h3>
+              <a href="index.html"> Home </a>
+              <a href="about.html"> About </a>
+              <a href="programs.html"> Programs </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Tamkeen</h3>
+              <a href="gallery.html"> Gallery </a>
+              <a href="media.html"> Media center </a>
+              <a href="family.html"> Our family </a>
+              <a href="certificate.html"> Verify a certificate </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Get in touch</h3>
+              <a href="contact.html"> Dubai &amp; Ajman </a>
+              <a href="tel:+971505057160"> +971 50 505 7160 </a>
+              <a href="contact.html"> Email us </a>
+              <a href="contact.html"> Support </a>
+              <a href="contact.html"> Complaints </a>
+            </div>
+          </nav>
+        </div>
+        <div aria-label="Social media" class="footer-social">
+          <a
+            aria-label="Instagram"
+            data-placeholder="ADD YOUR INSTAGRAM LINK HERE"
+            href="#"
+            title="Instagram"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/instagram.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="WhatsApp"
+            href="https://wa.me/971505057160"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="WhatsApp"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/whatsapp.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="TikTok"
+            data-placeholder="ADD YOUR TIKTOK LINK HERE"
+            href="#"
+            title="TikTok"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/tiktok.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="Facebook"
+            data-placeholder="ADD YOUR FACEBOOK LINK HERE"
+            href="#"
+            title="Facebook"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/facebook.svg"
+              width="24"
+            />
+          </a>
+        </div>
+        <p class="footer-note">
+          <span> © Tamkeen Training Center · Concept redesign </span>
+          <span class="footer-legal-links">
+            <a href="contact.html"> Privacy enquiries </a>
+            ·
+            <a href="refund-policy.html"> Refund enquiries </a>
+            ·
+            <a href="contact.html"> Contact </a>
+          </span>
+        </p>
+      </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/program-catalog-data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/verified-course-details.js"></script>
+    <script src="js/editorial-course-previews.js"></script>
+    <script src="js/course-faq-supplements.js"></script>
+    <script src="js/user-supplied-url-details.js"></script>
+    <script src="js/additional-sourced-course-details.js"></script>
+    <script src="js/user-status-map.js"></script>
+    <script>
+      document
+        .getElementById("dvBookNow")
+        ?.addEventListener("click", function (e) {
+          e.preventDefault();
+          let ids = [];
+          try {
+            ids = JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
+          } catch (e) {}
+          if (!Array.isArray(ids)) ids = [];
+          if (!ids.includes("catalog-26")) ids.push("catalog-26");
+          localStorage.setItem("tamkeenBlueSaved", JSON.stringify(ids));
+          location.href = "checkout.html";
+        });
+    </script>
+    <script src="js/book-now-choice.js"></script>
+    <script>
+      /* A fresh Programs navigation clears saved filters; browser Back retains catalog position. */
+      document.addEventListener(
+        "click",
+        function (event) {
+          var link = event.target.closest("a[href]");
+          if (!link) return;
+          try {
+            var target = new URL(link.href, location.href);
+            if (
+              target.origin === location.origin &&
+              /\/programs\.html$/.test(target.pathname) &&
+              !target.search
+            ) {
+              sessionStorage.setItem("tamkeen-programs-explicit-reset", "1");
+            }
+          } catch (e) {}
+        },
+        true,
+      );
+    </script>
+    <script src="js/program-catalog-data.js"></script>
+    <script src="js/tamkeen-chatbot-config.js"></script>
+    <script defer="" src="js/tamkeen-chatbot.js"></script>
+  </body>
+</html>

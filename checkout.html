@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#0a1931" name="theme-color" />
+    <title>Checkout enquiry | Tamkeen Training</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/tamkeen-chatbot.css" rel="stylesheet" />
+  </head>
+  <body data-page="index">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img
+          alt="Tamkeen Training Center logo"
+          class="tamkeen-logo-header"
+          src="assets/tamkeen-official-logo.png"
+        />
+      </a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a data-nav="home" href="index.html"> Home </a>
+        <a data-nav="about" href="about.html"> About </a>
+        <a data-nav="programs" href="programs.html"> Programs </a>
+        <a data-nav="certificate" href="certificate.html">
+          Verify a certificate
+        </a>
+      </nav>
+      <div class="header-tools">
+        <button
+          aria-label="Search programs"
+          class="header-search"
+          id="searchBtn"
+        >
+          <span> Search programs </span>
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+        </button>
+        <a aria-label="Login" class="tool" href="login.html" title="Login">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M4.5 21c.4-4.3 3-6.5 7.5-6.5s7.1 2.2 7.5 6.5"></path>
+          </svg>
+        </a>
+        <button
+          aria-label="Shopping cart"
+          class="tool cart"
+          id="cartBtn"
+          title="Shopping cart"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M3 4h2l2.3 11h11.2l2-8H6"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+          <span id="cartCount"> 0 </span>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="tool"
+          id="menuBtn"
+          title="Menu"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+        <a class="contact-cta" href="contact.html">
+          Contact Us
+          <span> ↗ </span>
+        </a>
+      </div>
+    </header>
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+    <aside
+      aria-hidden="true"
+      aria-label="Full website menu"
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+      <div class="drawer-head">
+        <a aria-label="Tamkeen homepage" class="drawer-brand" href="index.html">
+          <img
+            alt="Tamkeen Training Center logo"
+            class="tamkeen-logo-drawer"
+            src="assets/tamkeen-logo-drawer-transparent.png"
+          />
+        </a>
+        <button
+          aria-label="Close menu"
+          class="drawer-close"
+          id="menuClose"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="drawer-scroll">
+        <form class="drawer-search" id="drawerSearchForm">
+          <input
+            aria-label="Search programs"
+            autocomplete="off"
+            id="drawerSearchInput"
+            placeholder="Search programs..."
+          />
+          <button aria-label="Search" type="submit">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <circle cx="10.5" cy="10.5" r="6.5"></circle>
+              <path d="m15.5 15.5 5 5"></path>
+            </svg>
+          </button>
+        </form>
+        <div class="drawer-section-label">MENU</div>
+        <a class="drawer-link" data-menu-page="home" href="index.html">
+          <span aria-hidden="true" class="drawer-icon"> ⌂ </span>
+          <span class="drawer-link-text"> Home </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="about" href="about.html">
+          <span aria-hidden="true" class="drawer-icon"> ⓘ </span>
+          <span class="drawer-link-text"> About Tamkeen </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="programs" href="programs.html">
+          <span aria-hidden="true" class="drawer-icon"> ▤ </span>
+          <span class="drawer-link-text"> All training programs </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-menu-page="certificate"
+          href="certificate.html"
+        >
+          <span aria-hidden="true" class="drawer-icon"> ▦ </span>
+          <span class="drawer-link-text"> Verify a certificate </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="family" href="family.html">
+          <span aria-hidden="true" class="drawer-icon"> ♧ </span>
+          <span class="drawer-link-text"> Tamkeen family </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="media" href="media.html">
+          <span aria-hidden="true" class="drawer-icon"> ▷ </span>
+          <span class="drawer-link-text"> Media center </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="gallery" href="gallery.html">
+          <span aria-hidden="true" class="drawer-icon"> ▧ </span>
+          <span class="drawer-link-text"> Photo gallery </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <div class="drawer-section-label drawer-quick">QUICK LINKS</div>
+        <a class="drawer-link" data-menu-page="contact" href="contact.html">
+          <span aria-hidden="true" class="drawer-icon"> ✉ </span>
+          <span class="drawer-link-text"> Contact us </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="login" href="login.html">
+          <span aria-hidden="true" class="drawer-icon"> ♙ </span>
+          <span class="drawer-link-text"> My account </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-drawer-cart="true"
+          data-menu-page="cart"
+          href="#cart"
+        >
+          <span aria-hidden="true" class="drawer-icon"> 🛒 </span>
+          <span class="drawer-link-text"> Cart </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+      </div>
+      <div class="drawer-bottom">
+        <div class="drawer-contact-row">
+          <a href="contact.html"> ☎   Call us </a>
+          <a href="contact.html"> ✉   Email </a>
+        </div>
+        <div class="drawer-languages">
+          <button data-lang="ar" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United Arab Emirates flag" src="assets/flag-uae.svg" />
+            </span>
+            <span> عربي </span>
+          </button>
+          <button class="selected" data-lang="en" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United States flag" src="assets/flag-us.svg" />
+            </span>
+            <span> English </span>
+          </button>
+        </div>
+      </div>
+    </aside>
+    <div aria-hidden="true" class="search-layer" id="searchLayer">
+      <button class="close-layer" id="closeSearch">✕</button>
+      <p class="kicker">DISCOVER YOUR NEXT SKILL</p>
+      <label for="globalSearch"> What will you learn next? </label>
+      <input
+        autocomplete="off"
+        id="globalSearch"
+        placeholder="Search courses, skills, topics…"
+      />
+      <div id="searchResults"></div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside
+      aria-label="Your cart"
+      aria-modal="true"
+      class="cart-drawer"
+      id="cartDrawer"
+      role="dialog"
+    >
+      <div class="cart-panel-head">
+        <h2>
+          Your cart
+          <span id="cartHeadingCount"> (items: 0) </span>
+        </h2>
+        <button aria-label="Close cart" class="cart-x" id="closeCart">×</button>
+      </div>
+      <div class="cart-panel-items" id="cartItems"></div>
+      <div class="cart-panel-bottom">
+        <div class="cart-total">
+          <strong> Subtotal </strong>
+          <strong id="cartSubtotal"> AED 0.00 </strong>
+        </div>
+        <p class="cart-disclaimer">
+          Prices are indicative where available. Unpriced courses require a
+          quote; final fees must be confirmed with Tamkeen.
+        </p>
+        <div class="cart-actions">
+          <a class="cart-solid-btn" href="checkout.html"> Go to checkout </a>
+        </div>
+      </div>
+    </aside>
+    <main class="checkout-main">
+      <section class="checkout-intro">
+        <div>
+          <span class="kicker"> YOUR NEXT STEP / ENROLLMENT </span>
+          <h1>
+            Your enrollment,
+            <em> step by step. </em>
+          </h1>
+          <p>
+            Review your selected training programs and enter your enrollment
+            details.
+          </p>
+        </div>
+        <a class="checkout-back" href="programs.html">
+          ← Continue browsing programs
+        </a>
+      </section>
+      <div class="checkout-progress">
+        <span data-checkout-progress="1"> 01 Your Cart </span>
+        <span data-checkout-progress="2"> 02 Checkout </span>
+        <span data-checkout-progress="3"> 03 Confirmation </span>
+      </div>
+      <div class="checkout-notice">
+        <strong> Prototype checkout </strong>
+        <p>
+          Review your cart first, confirm your selection, then complete the
+          checkout details. This is a local prototype; no payment or
+          registration will be submitted.
+        </p>
+      </div>
+      <section
+        aria-label="Selected programs"
+        class="checkout-cart-review checkout-panel"
+        data-checkout-stage="1"
+      >
+        <div class="checkout-panel-title">
+          <span> 01 </span>
+          <div>
+            <span class="kicker"> STEP 01 / REVIEW YOUR SELECTION </span>
+            <h2>Your Cart</h2>
+          </div>
+        </div>
+        <p class="checkout-review-intro">
+          Review the programs you have added. Change quantities or remove a
+          course before continuing.
+        </p>
+        <div
+          aria-live="polite"
+          class="checkout-review-items"
+          id="checkoutCartItems"
+        ></div>
+        <div class="checkout-review-total">
+          <strong> Estimated subtotal </strong>
+          <strong id="checkoutReviewSubtotal"> AED 0.00 </strong>
+        </div>
+        <p class="checkout-price-note">
+          Prices are indicative where available. Courses without confirmed
+          prices require a quote.
+        </p>
+        <button class="checkout-step-button" id="confirmCartStep" type="button">
+          Confirm &amp; continue to checkout →
+        </button>
+        <p
+          aria-live="polite"
+          class="checkout-step-message"
+          id="checkoutCartMessage"
+        ></p>
+      </section>
+      <form
+        class="checkout-layout checkout-layout-stacked"
+        data-checkout-stage="2"
+        hidden="hidden"
+        id="tamkeenCheckoutForm"
+        novalidate=""
+      >
+        <button class="checkout-step-back" id="backToCartStep" type="button">
+          ← Back to Your Cart
+        </button>
+        <div class="checkout-left">
+          <section class="checkout-panel">
+            <div class="checkout-panel-title">
+              <span> 02 </span>
+              <div>
+                <span class="kicker"> YOUR DETAILS </span>
+                <h2>Billing details</h2>
+              </div>
+            </div>
+            <div class="checkout-fields">
+              <label>
+                First name
+                <b> * </b>
+                <input
+                  autocomplete="given-name"
+                  name="firstName"
+                  placeholder="First name"
+                  required=""
+                />
+              </label>
+              <label>
+                Last name
+                <b> * </b>
+                <input
+                  autocomplete="family-name"
+                  name="lastName"
+                  placeholder="Last name"
+                  required=""
+                />
+              </label>
+              <label class="wide">
+                Country / Region
+                <b> * </b>
+                <select name="country" required="">
+                  <option value="United Arab Emirates">
+                    United Arab Emirates
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+              <label class="wide">
+                Street address
+                <b> * </b>
+                <input
+                  autocomplete="street-address"
+                  name="address"
+                  placeholder="Building, street and area"
+                  required=""
+                />
+              </label>
+              <label>
+                Town / City
+                <b> * </b>
+                <input
+                  autocomplete="address-level2"
+                  name="city"
+                  placeholder="City"
+                  required=""
+                />
+              </label>
+              <label>
+                Emirate / State
+                <b> * </b>
+                <select name="state" required="">
+                  <option value="">Select emirate</option>
+                  <option>Abu Dhabi</option>
+                  <option>Dubai</option>
+                  <option>Sharjah</option>
+                  <option>Ajman</option>
+                  <option>Umm Al Quwain</option>
+                  <option>Ras Al Khaimah</option>
+                  <option>Fujairah</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                Phone
+                <b> * </b>
+                <input
+                  autocomplete="tel"
+                  name="phone"
+                  placeholder="+971 5X XXX XXXX"
+                  required=""
+                  type="tel"
+                />
+              </label>
+              <label>
+                Email address
+                <b> * </b>
+                <input
+                  autocomplete="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required=""
+                  type="email"
+                />
+              </label>
+            </div>
+          </section>
+          <section class="checkout-panel">
+            <div class="checkout-panel-title">
+              <span> 03 </span>
+              <div>
+                <span class="kicker"> OPTIONAL INFORMATION </span>
+                <h2>Additional information</h2>
+              </div>
+            </div>
+            <label class="checkout-notes">
+              Order notes
+              <small> (optional) </small>
+              <textarea
+                name="notes"
+                placeholder="Any questions about course dates, schedules, or enrollment?"
+                rows="4"
+              ></textarea>
+            </label>
+          </section>
+        </div>
+        <div class="checkout-right">
+          <section class="checkout-panel checkout-order">
+            <div class="checkout-panel-title">
+              <span> 04 </span>
+              <div>
+                <span class="kicker"> YOUR SELECTION </span>
+                <h2>Your order</h2>
+              </div>
+            </div>
+            <div class="checkout-table-head">
+              <strong> Program </strong>
+              <strong> Subtotal </strong>
+            </div>
+            <div aria-live="polite" id="checkoutSummary"></div>
+            <p class="checkout-price-note">
+              Prices are indicative. Unpriced courses require confirmation.
+              Taxes, if applicable, will be confirmed by Tamkeen.
+            </p>
+          </section>
+          <section class="checkout-panel checkout-payment">
+            <div class="checkout-panel-title">
+              <span> 05 </span>
+              <div>
+                <span class="kicker"> PAYMENT </span>
+                <h2>Payment method</h2>
+              </div>
+            </div>
+            <div class="checkout-method">
+              <span class="checkout-radio"> </span>
+              <div>
+                <strong> Payment arranged with Tamkeen </strong>
+                <p>
+                  Payment processing is not connected in this prototype. Contact
+                  Tamkeen to confirm available payment methods and complete
+                  enrollment.
+                </p>
+              </div>
+            </div>
+            <label class="checkout-consent">
+              <input id="checkoutAcknowledgement" required="" type="checkbox" />
+              <span>
+                I understand this is a website prototype and no enrollment or
+                payment will be submitted.
+              </span>
+            </label>
+            <button class="checkout-submit" type="submit">
+              Review &amp; confirm enquiry →
+            </button>
+            <div
+              aria-live="polite"
+              class="checkout-feedback"
+              id="checkoutFeedback"
+              role="status"
+            ></div>
+          </section>
+        </div>
+      </form>
+      <section
+        aria-label="Confirmation"
+        class="checkout-panel checkout-confirmation"
+        data-checkout-stage="3"
+        hidden="hidden"
+      >
+        <div class="checkout-panel-title">
+          <span> 03 </span>
+          <div>
+            <span class="kicker"> FINAL STEP </span>
+            <h2>Confirmation</h2>
+          </div>
+        </div>
+        <p>
+          Review your selected programs and the information entered. This is a
+          website prototype: no payment or enrollment will be submitted.
+        </p>
+        <div id="checkoutFinalSummary"></div>
+        <div class="checkout-final-actions">
+          <button
+            class="checkout-step-back"
+            id="backToDetailsStep"
+            type="button"
+          >
+            ← Edit checkout details
+          </button>
+          <button
+            class="checkout-step-button"
+            id="finishCheckoutPreview"
+            type="button"
+          >
+            Confirm preview
+          </button>
+        </div>
+        <p aria-live="polite" id="checkoutFinalMessage"></p>
+      </section>
+    </main>
+    <script defer="defer" src="js/checkout-steps.js"></script>
+    <footer class="site-footer">
+      <div class="footer-art"></div>
+      <div class="footer-content">
+        <span class="kicker"> THE NEXT CHAPTER STARTS WITH YOU </span>
+        <h2>
+          Make your next
+          <br />
+          <em> move count. </em>
+        </h2>
+        <a class="button button-light" href="programs.html">
+          Explore programs ↗
+        </a>
+        <div class="footer-row">
+          <div class="footer-brand">
+            <img
+              alt="Tamkeen Training Center logo"
+              class="tamkeen-logo-footer"
+              src="assets/tamkeen-footer-logo.png"
+            />
+            <p>Empowering minds. Shaping what’s next.</p>
+          </div>
+          <nav aria-label="Footer navigation" class="footer-nav">
+            <div class="footer-link-group">
+              <h3>Explore</h3>
+              <a href="index.html"> Home </a>
+              <a href="about.html"> About </a>
+              <a href="programs.html"> Programs </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Tamkeen</h3>
+              <a href="gallery.html"> Gallery </a>
+              <a href="media.html"> Media center </a>
+              <a href="family.html"> Our family </a>
+              <a href="certificate.html"> Verify a certificate </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Get in touch</h3>
+              <a href="contact.html"> Dubai &amp; Ajman </a>
+              <a href="tel:+971505057160"> +971 50 505 7160 </a>
+              <a href="contact.html"> Email us </a>
+              <a href="contact.html"> Support </a>
+              <a href="contact.html"> Complaints </a>
+            </div>
+          </nav>
+        </div>
+        <div aria-label="Social media" class="footer-social">
+          <a
+            aria-label="Instagram"
+            data-placeholder="ADD YOUR INSTAGRAM LINK HERE"
+            href="#"
+            title="Instagram"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/instagram.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="WhatsApp"
+            href="https://wa.me/971505057160"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="WhatsApp"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/whatsapp.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="TikTok"
+            data-placeholder="ADD YOUR TIKTOK LINK HERE"
+            href="#"
+            title="TikTok"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/tiktok.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="Facebook"
+            data-placeholder="ADD YOUR FACEBOOK LINK HERE"
+            href="#"
+            title="Facebook"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/facebook.svg"
+              width="24"
+            />
+          </a>
+        </div>
+        <p class="footer-note">
+          <span> © Tamkeen Training Center · Concept redesign </span>
+          <span class="footer-legal-links">
+            <a href="#"> Privacy </a>
+            ·
+            <a href="refund-policy.html"> Refund policy </a>
+            ·
+            <a href="contact.html"> Contact </a>
+          </span>
+        </p>
+      </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/program-catalog-data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      /* A fresh Programs navigation clears saved filters; browser Back retains catalog position. */
+      document.addEventListener(
+        "click",
+        function (event) {
+          var link = event.target.closest("a[href]");
+          if (!link) return;
+          try {
+            var target = new URL(link.href, location.href);
+            if (
+              target.origin === location.origin &&
+              /\/programs\.html$/.test(target.pathname) &&
+              !target.search
+            ) {
+              sessionStorage.setItem("tamkeen-programs-explicit-reset", "1");
+            }
+          } catch (e) {}
+        },
+        true,
+      );
+    </script>
+    <script src="js/program-catalog-data.js"></script>
+    <script src="js/tamkeen-chatbot-config.js"></script>
+    <script defer="" src="js/tamkeen-chatbot.js"></script>
+  </body>
+</html>

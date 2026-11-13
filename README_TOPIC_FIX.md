@@ -1,0 +1,1 @@
+The six featured courses with topic headings only now display all 12 topics as visible, non-expandable cards rather than empty accordions. The seventh Marketing and Sales course retains its detailed topic accordion. All other course pages and data files remain unchanged.

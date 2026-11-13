@@ -1,0 +1,1 @@
+Translated the user-provided 2024 Arabic article into English on news-criminal-law.html. Legal claims, law references and monetary penalties are preserved from the supplied article and have not been independently verified as current law. All other site pages are copied unchanged from the previous version.

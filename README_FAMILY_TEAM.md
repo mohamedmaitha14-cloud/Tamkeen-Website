@@ -1,0 +1,1 @@
+Updated Tamkeen Family page with 14 portraits cropped from the user-supplied screenshots, their translated names/specialties, plus Ahmed Anwar (Software Programming Instructor). Ahmed Anwar has an initials placeholder because no photo was supplied. Name transliterations from small screenshot text should be reviewed before publication. Other pages are unchanged.

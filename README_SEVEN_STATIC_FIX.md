@@ -1,0 +1,1 @@
+Seven featured course pages now contain pre-rendered Training Topics and FAQs in their HTML, not dependent on JavaScript data matching. All other catalog entries and course detail pages are unchanged. The Programs card links for the seven IDs alone point to course-featured-ID.html.

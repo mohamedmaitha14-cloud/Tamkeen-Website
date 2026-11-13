@@ -1,0 +1,2424 @@
+[
+  {
+    "id": 16,
+    "title": "Advanced Artificial Intelligence",
+    "department": [
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 1,
+    "title": "Using Artificial Intelligence in Cybersecurity",
+    "department": [
+      "Law",
+      "Technical",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 22,
+    "title": "Quality Management and Healthcare Using Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 24,
+    "title": "AI-Powered Hospital Management",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2900,
+    "online": true
+  },
+  {
+    "id": 17,
+    "title": "Project Management Using Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 26,
+    "title": "Procurement Management Using Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3100,
+    "online": true
+  },
+  {
+    "id": 29,
+    "title": "Training in Sustainability and Digital Transformation",
+    "department": [
+      "Management",
+      "Technical"
+    ],
+    "category": "Technology & AI",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 4,
+    "title": "Marketing and Sales Management Training Program",
+    "department": [
+      "Marketing",
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & leadership",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 23,
+    "title": "AI-Powered School Management",
+    "department": [
+      "Educational",
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2700,
+    "online": true
+  },
+  {
+    "id": 2,
+    "title": "Neuro-Linguistic Programming (NLP)",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 8,
+    "title": "Pricing Strategies and Price Analysis Training Program",
+    "department": [
+      "Financial",
+      "Marketing",
+      "Educational"
+    ],
+    "category": "Finance & accounting",
+    "price": 3800,
+    "online": true
+  },
+  {
+    "id": 11,
+    "title": "Advanced E-Commerce Training Program",
+    "department": [
+      "Marketing",
+      "Educational",
+      "Technical"
+    ],
+    "category": "Business & leadership",
+    "price": 5000,
+    "online": true
+  },
+  {
+    "id": 34,
+    "title": "Financial Accounting Training Program",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 35,
+    "title": "Professional Accounting Training Program",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 38,
+    "title": "Data Analysis Using Excel and Power BI Training Program",
+    "department": [
+      "Educational",
+      "Technical"
+    ],
+    "category": "Technology & AI",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 80,
+    "title": "Training Programme in Content Creation Using Artificial Intelligence",
+    "department": [
+      "Graphics and Design",
+      "Marketing",
+      "Educational",
+      "AI"
+    ],
+    "category": "Design",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 91,
+    "title": "Income Tax and Value Added Tax Training Program",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & Accounting",
+    "price": 4000,
+    "online": true
+  },
+  {
+    "id": 95,
+    "title": "National Security and Geopolitics Preparation Course",
+    "department": [
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 96,
+    "title": "Certified Management Accountant (CMA) Exam Preparation",
+    "department": [
+      "Financial",
+      "Management"
+    ],
+    "category": "Finance & Accounting",
+    "price": 4000,
+    "online": true
+  },
+  {
+    "id": 97,
+    "title": "Certified Public Accountant (CPA) Exam Preparation",
+    "department": [
+      "Financial"
+    ],
+    "category": "Finance & Accounting",
+    "price": 4000,
+    "online": true
+  },
+  {
+    "id": 98,
+    "title": "Certified Internal Auditor (CIA) Exam Preparation",
+    "department": [
+      "Financial"
+    ],
+    "category": "Finance & Accounting",
+    "price": 4000,
+    "online": true
+  },
+  {
+    "id": 99,
+    "title": "Psychoanalysis and Stress Management",
+    "department": [
+      "Psychology",
+      "Management"
+    ],
+    "category": "Personal development",
+    "price": 2550,
+    "online": true
+  },
+  {
+    "id": 43,
+    "title": "EmSAT Exam Preparation",
+    "department": [
+      "Languages"
+    ],
+    "category": "Languages & Exams",
+    "price": 3800,
+    "online": true
+  },
+  {
+    "id": 44,
+    "title": "IELTS Exam Preparation",
+    "department": [
+      "Languages"
+    ],
+    "category": "Languages & Exams",
+    "price": 3700,
+    "online": true
+  },
+  {
+    "id": 45,
+    "title": "SAT Exam Preparation",
+    "department": [
+      "Languages"
+    ],
+    "category": "Languages & Exams",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 46,
+    "title": "TOEFL Exam Preparation",
+    "department": [
+      "Languages"
+    ],
+    "category": "Languages & Exams",
+    "price": 3800,
+    "online": true
+  },
+  {
+    "id": 47,
+    "title": "Kindergarten Teaching Skills Training",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education & Training",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 48,
+    "title": "Sports Nutrition Fundamentals",
+    "department": [
+      "Management"
+    ],
+    "category": "Health & Wellbeing",
+    "price": 3050,
+    "online": true
+  },
+  {
+    "id": 49,
+    "title": "Arabic Language Fundamentals",
+    "department": [
+      "Languages"
+    ],
+    "category": "Languages & Exams",
+    "price": 3100,
+    "online": true
+  },
+  {
+    "id": 50,
+    "title": "General Psychology Fundamentals",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Business & Management",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 51,
+    "title": "Hotel Security Management",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 53,
+    "title": "Crisis and Disaster Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 54,
+    "title": "Advanced Business Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 55,
+    "title": "Production and Operations Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 57,
+    "title": "Development and Change Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 19,
+    "title": "Human Resource Management Using Artificial Intelligence",
+    "department": [
+      "Human Resources",
+      "Management",
+      "AI"
+    ],
+    "category": "Business & leadership",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 3,
+    "title": "E-Commerce Management Training Program",
+    "department": [
+      "Marketing",
+      "Educational",
+      "Management",
+      "Technical"
+    ],
+    "category": "Business & leadership",
+    "price": 4000,
+    "online": true
+  },
+  {
+    "id": 157,
+    "title": "Training in Digital Transformation in Business Administration",
+    "department": [
+      "Educational",
+      "Management",
+      "Technical"
+    ],
+    "category": "Business & leadership",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 223,
+    "title": "Training in Foundations of Education and Teaching Using Artificial Intelligence",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Education",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 21,
+    "title": "Business Administration Using Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 28,
+    "title": "Training in Innovation in Government Communication Using Artificial Intelligence",
+    "department": [
+      "Marketing",
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 158,
+    "title": "Training Programme in Real Estate Deal Management and Negotiation",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Real estate",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 6,
+    "title": "Training Programme in Educational Institution Management Using Artificial Intelligence",
+    "department": [
+      "Educational",
+      "Management",
+      "AI"
+    ],
+    "category": "Education & training",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 9,
+    "title": "Training Program in Investment and Asset Management",
+    "department": [
+      "Financial",
+      "Educational",
+      "Management"
+    ],
+    "category": "Finance & accounting",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 10,
+    "title": "Training Program in Sanctions Compliance and Financial Crime",
+    "department": [
+      "Financial",
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Finance & accounting",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 12,
+    "title": "Training Program in Financial Analysis and Performance Evaluation",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & accounting",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 13,
+    "title": "Training Program in Trading and Digital Currencies",
+    "department": [
+      "Financial",
+      "Educational",
+      "Technical"
+    ],
+    "category": "Finance & accounting",
+    "price": 3600,
+    "online": true
+  },
+  {
+    "id": 15,
+    "title": "Digital Marketing and Social Media Strategy Training Program",
+    "department": [
+      "Marketing",
+      "Educational",
+      "Technical"
+    ],
+    "category": "Digital media",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 30,
+    "title": "Training Program in Sustainable Finance and Climate Risk Management",
+    "department": [
+      "Financial",
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 31,
+    "title": "Occupational Safety and Health",
+    "department": [
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Safety",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 32,
+    "title": "Early Childhood Using Artificial Intelligence",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 33,
+    "title": "Cognitive Behavioural Therapy for Addiction and Recovery",
+    "department": [
+      "Psychology",
+      "Educational"
+    ],
+    "category": "Health & Wellbeing",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 36,
+    "title": "Training Program in Accounting for Non-Accountants",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 37,
+    "title": "Training Program in Real Estate Investment Analysis",
+    "department": [
+      "Financial",
+      "Educational",
+      "Management"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 39,
+    "title": "Training Program in Real Estate Market Analysis",
+    "department": [
+      "Marketing",
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 40,
+    "title": "Training Program in Stock and Forex Trading",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Business & Management",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 41,
+    "title": "Training Programme in Customer Service Using Artificial Intelligence",
+    "department": [
+      "Marketing",
+      "Educational",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3100,
+    "online": true
+  },
+  {
+    "id": 92,
+    "title": "Student Guidance and Academic Support Skills",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 93,
+    "title": "Training Program in Financial Analyst Skills",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 94,
+    "title": "Certified Facility Manager (CFM) Preparation Programme",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 56,
+    "title": "Training in Bank and Financial Institution Management",
+    "department": [
+      "Financial",
+      "Management"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 58,
+    "title": "Therapeutic Nutrition Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Health & Wellbeing",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 5,
+    "title": "Real Estate Deals and Negotiation Management Training Program",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & leadership",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 7,
+    "title": "YouTube Content Creation and Digital Platform Success Training Program",
+    "department": [
+      "Graphics and Design",
+      "Marketing",
+      "Educational",
+      "Technical"
+    ],
+    "category": "Digital media",
+    "price": 4200,
+    "online": true
+  },
+  {
+    "id": 14,
+    "title": "Auditing Training Program",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & accounting",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 18,
+    "title": "English Language Training",
+    "department": [
+      "Languages",
+      "Educational"
+    ],
+    "category": "Languages",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 20,
+    "title": "Fundamentals of AI-Assisted Education and Teaching",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 25,
+    "title": "AI-Powered Project Management",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 27,
+    "title": "AI-Powered Human Resources Management",
+    "department": [
+      "Human Resources",
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 42,
+    "title": "AI-Powered Content Creation Training Program",
+    "department": [
+      "Graphics and Design",
+      "Marketing",
+      "Educational",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 52,
+    "title": "Medical Error Management: Law and Medicine",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Safety",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 59,
+    "title": "Advanced Clinical Nutrition Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Health & Wellbeing",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 60,
+    "title": "Supply Chain and Procurement Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 61,
+    "title": "Quality Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 62,
+    "title": "Total Quality Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 63,
+    "title": "Healthcare Quality Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Health & Wellbeing",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 64,
+    "title": "Quality Management and Cost Reduction for Productivity",
+    "department": [
+      "Financial",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 65,
+    "title": "Fire and Industrial Safety Management",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Safety",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 66,
+    "title": "Nursery Management",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Education & Training",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 67,
+    "title": "Secretarial and Office Administration",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 68,
+    "title": "Tourism and Hospitality Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 69,
+    "title": "Classroom Management and Inclusive Education",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Education & Training",
+    "price": 2700,
+    "online": true
+  },
+  {
+    "id": 70,
+    "title": "Security Emergency and Crisis Management",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Safety",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 71,
+    "title": "Events and Conference Management",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 72,
+    "title": "Healthcare Workforce Management",
+    "department": [
+      "Human Resources",
+      "Management"
+    ],
+    "category": "Health & Wellbeing",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 73,
+    "title": "Agricultural Risk Management",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Safety",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 74,
+    "title": "Legal Risk Management",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Safety",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 75,
+    "title": "Communication Skills Training",
+    "department": [
+      "Educational"
+    ],
+    "category": "Professional Skills",
+    "price": 2750,
+    "online": true
+  },
+  {
+    "id": 76,
+    "title": "AI-Powered Interior Design",
+    "department": [
+      "Graphics and Design",
+      "AI"
+    ],
+    "category": "Design",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 77,
+    "title": "Smart City Planning Skills Using Artificial Intelligence",
+    "department": [
+      "Technical",
+      "AI"
+    ],
+    "category": "AI & Technology",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 78,
+    "title": "Training of Trainers (TOT)",
+    "department": [
+      "Educational"
+    ],
+    "category": "Professional Skills",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 79,
+    "title": "Self E-Learning Skills",
+    "department": [
+      "Educational",
+      "Technical"
+    ],
+    "category": "Education",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 82,
+    "title": "Training in Teaching Artificial Intelligence to Children",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "AI & Education",
+    "price": 2750,
+    "online": true
+  },
+  {
+    "id": 83,
+    "title": "Training Course in Artificial Intelligence Applications in Business",
+    "department": [
+      "Educational",
+      "Management",
+      "AI"
+    ],
+    "category": "AI & Business",
+    "price": 2700,
+    "online": true
+  },
+  {
+    "id": 84,
+    "title": "Training in Applications of Artificial Intelligence",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "AI & Technology",
+    "price": 2750,
+    "online": true
+  },
+  {
+    "id": 88,
+    "title": "Digital Transformation in Business Administration",
+    "department": [
+      "Management",
+      "Technical"
+    ],
+    "category": "Business & Management",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 89,
+    "title": "Comprehensive Pedagogical Teaching Skills for Teachers",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education & Training",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 90,
+    "title": "Psychological Counselling and Behavioural Guidance",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Business & Management",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 100,
+    "title": "Digital Transformation in Business Management",
+    "department": [
+      "Management",
+      "Technical"
+    ],
+    "category": "Technology & AI",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 101,
+    "title": "Cultural Heritage Management Training Program",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Culture & Heritage",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 102,
+    "title": "Museum Management Training Program",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Culture & Heritage",
+    "price": null,
+    "online": true
+  },
+  {
+    "id": 103,
+    "title": "Museum Collections Management Training Program",
+    "department": [
+      "Graphics and Design",
+      "Educational",
+      "Management"
+    ],
+    "category": "Culture & Heritage",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 104,
+    "title": "Heritage Site Management and Cultural Tourism Training Program",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Culture & Heritage",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 105,
+    "title": "Emirati Heritage and National Identity Training Program",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Culture & Heritage",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 106,
+    "title": "Digital Heritage and Museum Archives Training Program",
+    "department": [
+      "Educational",
+      "Management",
+      "Technical"
+    ],
+    "category": "Culture & Heritage",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 107,
+    "title": "Museum Studies and Exhibition Management Training Program",
+    "department": [
+      "Graphics and Design",
+      "Educational",
+      "Management"
+    ],
+    "category": "Culture & Heritage",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 108,
+    "title": "Agentic Artificial Intelligence Training Program",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 109,
+    "title": "Real Estate Valuation Training Program",
+    "department": [
+      "Financial",
+      "Educational",
+      "Management"
+    ],
+    "category": "Real Estate",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 110,
+    "title": "Data Protection and Privacy Training Program",
+    "department": [
+      "Educational",
+      "Law",
+      "Technical"
+    ],
+    "category": "Technology & AI",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 111,
+    "title": "Museum and Heritage Conservation Training Program",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Culture & Heritage",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 112,
+    "title": "Training of Trainers Using Artificial Intelligence",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Education",
+    "price": 2700,
+    "online": true
+  },
+  {
+    "id": 113,
+    "title": "Future Leadership Development Using Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Business & Management",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 114,
+    "title": "Cybersecurity Education for Children",
+    "department": [
+      "Educational",
+      "Law",
+      "Technical"
+    ],
+    "category": "Education",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 115,
+    "title": "English Conversation Course",
+    "department": [
+      "Languages"
+    ],
+    "category": "Languages",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 116,
+    "title": "Scientific Research Preparation Course",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 117,
+    "title": "Basic E-Commerce Management Course",
+    "department": [
+      "Marketing",
+      "Management",
+      "Technical"
+    ],
+    "category": "Business & Management",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 118,
+    "title": "Startup Management Course",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 119,
+    "title": "Government Relations and Public Affairs Management Course",
+    "department": [
+      "Marketing",
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 120,
+    "title": "Fitness and Sports Health Management Course",
+    "department": [
+      "Management"
+    ],
+    "category": "Health & Fitness",
+    "price": 2750,
+    "online": true
+  },
+  {
+    "id": 121,
+    "title": "Real Estate Portfolio Management Course",
+    "department": [
+      "Management"
+    ],
+    "category": "Real Estate",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 122,
+    "title": "Real Estate Project Management Course",
+    "department": [
+      "Management"
+    ],
+    "category": "Real Estate",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 123,
+    "title": "Healthcare Human Resources Management Course",
+    "department": [
+      "Human Resources",
+      "Management"
+    ],
+    "category": "Healthcare",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 124,
+    "title": "Tourism Destination Management Course",
+    "department": [
+      "Marketing",
+      "Management"
+    ],
+    "category": "Hospitality & Tourism",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 125,
+    "title": "Airport Customer Service Management Course",
+    "department": [
+      "Marketing",
+      "Management"
+    ],
+    "category": "Hospitality & Tourism",
+    "price": 3100,
+    "online": true
+  },
+  {
+    "id": 126,
+    "title": "Solar Energy and Energy Storage Project Management Course",
+    "department": [
+      "Management",
+      "Technical"
+    ],
+    "category": "Sustainability",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 127,
+    "title": "Renewable Energy Project Management Course",
+    "department": [
+      "Management",
+      "Technical"
+    ],
+    "category": "Sustainability",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 128,
+    "title": "ISO 14001 Environmental Management and Environmental Impact Assessment",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Sustainability",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 129,
+    "title": "Corporate Legal Compliance and Governance Course",
+    "department": [
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 130,
+    "title": "Advanced E-Commerce Course",
+    "department": [
+      "Marketing",
+      "Technical"
+    ],
+    "category": "Business & Management",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 131,
+    "title": "Future Mobility Course",
+    "department": [
+      "Technical"
+    ],
+    "category": "Technology & AI",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 132,
+    "title": "Aviation Hospitality and Cabin Crew Course",
+    "department": [
+      "Management"
+    ],
+    "category": "Hospitality & Tourism",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 133,
+    "title": "Real Estate Law and Investment Course",
+    "department": [
+      "Financial",
+      "Management",
+      "Law"
+    ],
+    "category": "Real Estate",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 134,
+    "title": "Transformational Leadership Course",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 135,
+    "title": "Data Protection Officer (DPO) and Data Protection Law Compliance Course",
+    "department": [
+      "Management",
+      "Law",
+      "Technical"
+    ],
+    "category": "Technology & AI",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 136,
+    "title": "Self-Worth and Self-Esteem Skills Course",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 137,
+    "title": "Legal Trainer Skills Course",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 138,
+    "title": "Architectural Engineering Skills Course",
+    "department": [
+      "Graphics and Design"
+    ],
+    "category": "Design & Architecture",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 139,
+    "title": "Project Management Professional (PMP) Exam Preparation",
+    "department": [
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 140,
+    "title": "Artificial Intelligence Applications in the Workplace",
+    "department": [
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2900,
+    "online": true
+  },
+  {
+    "id": 141,
+    "title": "US Stock Market Trading Course",
+    "department": [
+      "Financial",
+      "Marketing"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 142,
+    "title": "Options and Futures Contracts Course",
+    "department": [
+      "Financial"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3600,
+    "online": true
+  },
+  {
+    "id": 143,
+    "title": "Government Excellence Ambassadors",
+    "department": [
+      "Management",
+      "Technical"
+    ],
+    "category": "Law & Governance",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 144,
+    "title": "Teaching Methods Using Artificial Intelligence",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Education",
+    "price": 2750,
+    "online": true
+  },
+  {
+    "id": 145,
+    "title": "Neuroaesthetics and Cognitive Patterns of Genius",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2650,
+    "online": true
+  },
+  {
+    "id": 146,
+    "title": "Positive Psychology and Quality of Life",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 147,
+    "title": "Social Psychology",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 148,
+    "title": "Organizational Psychology and Employee Wellbeing",
+    "department": [
+      "Human Resources",
+      "Psychology",
+      "Management"
+    ],
+    "category": "Personal development",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 149,
+    "title": "Forensic Psychology",
+    "department": [
+      "Psychology",
+      "Law"
+    ],
+    "category": "Personal development",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 150,
+    "title": "Self Psychology",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 151,
+    "title": "Sports Psychology",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 152,
+    "title": "Cyberpsychology and Digital Interaction",
+    "department": [
+      "Psychology",
+      "Technical"
+    ],
+    "category": "Personal development",
+    "price": 2550,
+    "online": true
+  },
+  {
+    "id": 153,
+    "title": "Neuropsychology",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2650,
+    "online": true
+  },
+  {
+    "id": 154,
+    "title": "Financial Psychology",
+    "department": [
+      "Financial",
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 155,
+    "title": "Cognitive Psychology",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Personal development",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 156,
+    "title": "Educational Leadership Using Artificial Intelligence",
+    "department": [
+      "Educational",
+      "Management",
+      "AI"
+    ],
+    "category": "Education",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 159,
+    "title": "Government Management Using Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Business & leadership",
+    "price": null,
+    "online": true
+  },
+  {
+    "id": 160,
+    "title": "Legal and Ethical Governance of AI",
+    "department": [
+      "Law",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": null,
+    "online": true
+  },
+  {
+    "id": 161,
+    "title": "Leadership in the AI Age and Leader Skills",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "Business & leadership",
+    "price": null,
+    "online": true
+  },
+  {
+    "id": 162,
+    "title": "E-Commerce Management — Foundation Level",
+    "department": [
+      "Marketing",
+      "Management",
+      "Technical"
+    ],
+    "category": "Business & leadership",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 163,
+    "title": "Legal and Ethical Governance of Artificial Intelligence",
+    "department": [
+      "Law",
+      "AI"
+    ],
+    "category": "General",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 164,
+    "title": "Social Work and Sociology",
+    "department": [
+      "Psychology"
+    ],
+    "category": "General",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 166,
+    "title": "Artificial Intelligence in Government Administration",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "General",
+    "price": 3100,
+    "online": true
+  },
+  {
+    "id": 167,
+    "title": "Artificial Intelligence in Museums and Heritage",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "General",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 168,
+    "title": "Artificial Intelligence and Government Communication Skills",
+    "department": [
+      "Marketing",
+      "Management",
+      "AI"
+    ],
+    "category": "General",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 169,
+    "title": "Philosophy and Logic",
+    "department": [
+      "Psychology"
+    ],
+    "category": "General",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 170,
+    "title": "Strategic Leadership Using Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "General",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 171,
+    "title": "Strategic Leadership in the Age of Artificial Intelligence",
+    "department": [
+      "Management",
+      "AI"
+    ],
+    "category": "General",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 172,
+    "title": "Leadership and Organizational Psychology",
+    "department": [
+      "Human Resources",
+      "Psychology",
+      "Management"
+    ],
+    "category": "General",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 173,
+    "title": "German Language",
+    "department": [
+      "Languages"
+    ],
+    "category": "General",
+    "price": 3800,
+    "online": true
+  },
+  {
+    "id": 174,
+    "title": "Spanish Language",
+    "department": [
+      "Languages"
+    ],
+    "category": "General",
+    "price": 3700,
+    "online": true
+  },
+  {
+    "id": 175,
+    "title": "English Language",
+    "department": [
+      "Languages"
+    ],
+    "category": "General",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 176,
+    "title": "Russian Language",
+    "department": [
+      "Languages"
+    ],
+    "category": "General",
+    "price": 4200,
+    "online": true
+  },
+  {
+    "id": 177,
+    "title": "Chinese Language",
+    "department": [
+      "Languages"
+    ],
+    "category": "General",
+    "price": 4000,
+    "online": true
+  },
+  {
+    "id": 178,
+    "title": "Japanese Language",
+    "department": [
+      "Languages"
+    ],
+    "category": "General",
+    "price": 4000,
+    "online": true
+  },
+  {
+    "id": 179,
+    "title": "Digital Diplomacy Training",
+    "department": [
+      "Educational",
+      "Law",
+      "Technical"
+    ],
+    "category": "Law & Governance",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 180,
+    "title": "Artificial Intelligence Training",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 181,
+    "title": "Artificial Intelligence and Machine Learning Training",
+    "department": [
+      "Educational",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2700,
+    "online": true
+  },
+  {
+    "id": 182,
+    "title": "Emotional Intelligence and Creative Thinking Training",
+    "department": [
+      "Psychology",
+      "Educational"
+    ],
+    "category": "Personal development",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 183,
+    "title": "Executive Secretarial and Office Management Training",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 184,
+    "title": "Medical Secretarial and Health Records Management Training",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Healthcare",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 185,
+    "title": "Public Policy and Strategic Planning Training",
+    "department": [
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": null,
+    "online": true
+  },
+  {
+    "id": 186,
+    "title": "Shipping and Customs Clearance Training",
+    "department": [
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 187,
+    "title": "Mental Health Training",
+    "department": [
+      "Psychology",
+      "Educational"
+    ],
+    "category": "Healthcare",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 188,
+    "title": "Dialectical Behavior Therapy (DBT) Training",
+    "department": [
+      "Psychology",
+      "Educational"
+    ],
+    "category": "Healthcare",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 189,
+    "title": "Cognitive Behavioral Therapy (CBT) for Children",
+    "department": [
+      "Psychology",
+      "Educational"
+    ],
+    "category": "Healthcare",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 190,
+    "title": "Cognitive Behavioral Therapy (CBT) and Modern Techniques",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Healthcare",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 191,
+    "title": "Cognitive Behavioral Therapy for Depression and Anxiety",
+    "department": [
+      "Psychology"
+    ],
+    "category": "Healthcare",
+    "price": 2550,
+    "online": true
+  },
+  {
+    "id": 192,
+    "title": "Acceptance and Commitment Therapy (ACT) Training",
+    "department": [
+      "Psychology",
+      "Educational"
+    ],
+    "category": "Healthcare",
+    "price": 2500,
+    "online": true
+  },
+  {
+    "id": 193,
+    "title": "Diplomatic and International Relations Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 194,
+    "title": "Political Science and Strategy Training",
+    "department": [
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 195,
+    "title": "Legal and International Studies Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 196,
+    "title": "Banking and Finance Training",
+    "department": [
+      "Financial",
+      "Educational"
+    ],
+    "category": "Finance & Accounting",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 197,
+    "title": "Administrative Law Training",
+    "department": [
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 198,
+    "title": "Criminal Law Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 199,
+    "title": "Special Criminal Law Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 200,
+    "title": "Public International Law Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 201,
+    "title": "Public and Private Law Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 202,
+    "title": "French Law Training",
+    "department": [
+      "Languages",
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 203,
+    "title": "Civil Law Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 204,
+    "title": "Strategic Leadership and Innovation Training",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 205,
+    "title": "Educational Leadership and Educational Institution Management Training",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Education",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 206,
+    "title": "Strategic Leadership and Management Training",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 207,
+    "title": "Strategic Human Resources Leadership and Management Training",
+    "department": [
+      "Human Resources",
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 208,
+    "title": "Leadership and Team Building in Organizations Training",
+    "department": [
+      "Human Resources",
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 209,
+    "title": "Leadership and Team Development in Organizations Training",
+    "department": [
+      "Human Resources",
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 210,
+    "title": "French Language Training",
+    "department": [
+      "Languages",
+      "Educational"
+    ],
+    "category": "Languages",
+    "price": 3700,
+    "online": true
+  },
+  {
+    "id": 211,
+    "title": "Professional Video Editing Skills Training",
+    "department": [
+      "Graphics and Design",
+      "Educational"
+    ],
+    "category": "Design & Architecture",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 212,
+    "title": "Video Editing Skills Training",
+    "department": [
+      "Graphics and Design",
+      "Educational"
+    ],
+    "category": "Design & Architecture",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 213,
+    "title": "Student Motivation Skills for Teachers",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 214,
+    "title": "Future Leader Skills Training",
+    "department": [
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 215,
+    "title": "Corporate Lawyer and Legal Affairs Skills Training",
+    "department": [
+      "Educational",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 216,
+    "title": "Internal and External Quality Auditor Skills Training",
+    "department": [
+      "Financial",
+      "Educational",
+      "Management"
+    ],
+    "category": "Business & Management",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 217,
+    "title": "Teaching Assistant Skills Training",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education",
+    "price": 2750,
+    "online": true
+  },
+  {
+    "id": 218,
+    "title": "Shadow Teacher Skills Training",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education",
+    "price": 3000,
+    "online": true
+  },
+  {
+    "id": 219,
+    "title": "Kindergarten Teacher Skills Training",
+    "department": [
+      "Educational"
+    ],
+    "category": "Education",
+    "price": 2600,
+    "online": true
+  },
+  {
+    "id": 220,
+    "title": "Legal Negotiation Skills and Techniques Training",
+    "department": [
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Law & Governance",
+    "price": 3300,
+    "online": true
+  },
+  {
+    "id": 221,
+    "title": "ISO 45001 Occupational Health and Safety Management System Training",
+    "department": [
+      "Educational",
+      "Management",
+      "Law"
+    ],
+    "category": "Healthcare",
+    "price": 3400,
+    "online": true
+  },
+  {
+    "id": 222,
+    "title": "Sound Engineering Training",
+    "department": [
+      "Graphics and Design",
+      "Educational"
+    ],
+    "category": "Design & Architecture",
+    "price": 3500,
+    "online": true
+  },
+  {
+    "id": 224,
+    "title": "Interior Design Using 3ds Max",
+    "department": [
+      "Graphics and Design"
+    ],
+    "category": "Design & Architecture",
+    "price": 3200,
+    "online": true
+  },
+  {
+    "id": 225,
+    "title": "Organizational Development Using Artificial Intelligence",
+    "department": [
+      "Human Resources",
+      "Management",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2800,
+    "online": true
+  },
+  {
+    "id": 226,
+    "title": "Organizational Readiness and the Metaverse",
+    "department": [
+      "Management",
+      "Technical",
+      "AI"
+    ],
+    "category": "Technology & AI",
+    "price": 2600,
+    "online": true
+  }
+]

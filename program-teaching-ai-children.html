@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#0a1931" name="theme-color" />
+    <title>
+      Training in Teaching Artificial Intelligence to Children | Tamkeen
+      Training
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/tamkeen-chatbot.css" rel="stylesheet" />
+  </head>
+  <body data-page="course">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img
+          alt="Tamkeen Training Center logo"
+          class="tamkeen-logo-header"
+          src="assets/tamkeen-official-logo.png"
+        />
+      </a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a data-nav="home" href="index.html"> Home </a>
+        <a data-nav="about" href="about.html"> About </a>
+        <a data-nav="programs" href="programs.html"> Programs </a>
+        <a data-nav="certificate" href="certificate.html">
+          Verify a certificate
+        </a>
+      </nav>
+      <div class="header-tools">
+        <button
+          aria-label="Search programs"
+          class="header-search"
+          id="searchBtn"
+        >
+          <span> Search programs </span>
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+        </button>
+        <a aria-label="Login" class="tool" href="login.html" title="Login">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M4.5 21c.4-4.3 3-6.5 7.5-6.5s7.1 2.2 7.5 6.5"></path>
+          </svg>
+        </a>
+        <button
+          aria-label="Shopping cart"
+          class="tool cart"
+          id="cartBtn"
+          title="Shopping cart"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M3 4h2l2.3 11h11.2l2-8H6"></path>
+            <circle cx="9" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+          <span id="cartCount"> 0 </span>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="tool"
+          id="menuBtn"
+          title="Menu"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+        <a class="contact-cta" href="contact.html">
+          Contact Us
+          <span> ↗ </span>
+        </a>
+      </div>
+    </header>
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+    <aside
+      aria-hidden="true"
+      aria-label="Full website menu"
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+      <div class="drawer-head">
+        <a aria-label="Tamkeen homepage" class="drawer-brand" href="index.html">
+          <img
+            alt="Tamkeen Training Center logo"
+            class="tamkeen-logo-drawer"
+            src="assets/tamkeen-logo-drawer-transparent.png"
+          />
+        </a>
+        <button
+          aria-label="Close menu"
+          class="drawer-close"
+          id="menuClose"
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+      <div class="drawer-scroll">
+        <form class="drawer-search" id="drawerSearchForm">
+          <input
+            aria-label="Search programs"
+            autocomplete="off"
+            id="drawerSearchInput"
+            placeholder="Search programs..."
+          />
+          <button aria-label="Search" type="submit">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <circle cx="10.5" cy="10.5" r="6.5"></circle>
+              <path d="m15.5 15.5 5 5"></path>
+            </svg>
+          </button>
+        </form>
+        <div class="drawer-section-label">MENU</div>
+        <a class="drawer-link" data-menu-page="home" href="index.html">
+          <span aria-hidden="true" class="drawer-icon"> ⌂ </span>
+          <span class="drawer-link-text"> Home </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="about" href="about.html">
+          <span aria-hidden="true" class="drawer-icon"> ⓘ </span>
+          <span class="drawer-link-text"> About Tamkeen </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="programs" href="programs.html">
+          <span aria-hidden="true" class="drawer-icon"> ▤ </span>
+          <span class="drawer-link-text"> All training programs </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-menu-page="certificate"
+          href="certificate.html"
+        >
+          <span aria-hidden="true" class="drawer-icon"> ▦ </span>
+          <span class="drawer-link-text"> Verify a certificate </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="family" href="family.html">
+          <span aria-hidden="true" class="drawer-icon"> ♧ </span>
+          <span class="drawer-link-text"> Tamkeen family </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="media" href="media.html">
+          <span aria-hidden="true" class="drawer-icon"> ▷ </span>
+          <span class="drawer-link-text"> Media center </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="gallery" href="gallery.html">
+          <span aria-hidden="true" class="drawer-icon"> ▧ </span>
+          <span class="drawer-link-text"> Photo gallery </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <div class="drawer-section-label drawer-quick">QUICK LINKS</div>
+        <a class="drawer-link" data-menu-page="contact" href="contact.html">
+          <span aria-hidden="true" class="drawer-icon"> ✉ </span>
+          <span class="drawer-link-text"> Contact us </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a class="drawer-link" data-menu-page="login" href="login.html">
+          <span aria-hidden="true" class="drawer-icon"> ♙ </span>
+          <span class="drawer-link-text"> My account </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+        <a
+          class="drawer-link"
+          data-drawer-cart="true"
+          data-menu-page="cart"
+          href="#cart"
+        >
+          <span aria-hidden="true" class="drawer-icon"> 🛒 </span>
+          <span class="drawer-link-text"> Cart </span>
+          <span aria-hidden="true" class="drawer-chevron"> › </span>
+        </a>
+      </div>
+      <div class="drawer-bottom">
+        <div class="drawer-contact-row">
+          <a href="contact.html"> ☎   Call us </a>
+          <a href="contact.html"> ✉   Email </a>
+        </div>
+        <div class="drawer-languages">
+          <button data-lang="ar" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United Arab Emirates flag" src="assets/flag-uae.svg" />
+            </span>
+            <span> عربي </span>
+          </button>
+          <button class="selected" data-lang="en" type="button">
+            <span aria-hidden="true" class="lang-flag">
+              <img alt="United States flag" src="assets/flag-us.svg" />
+            </span>
+            <span> English </span>
+          </button>
+        </div>
+      </div>
+    </aside>
+    <div aria-hidden="true" class="search-layer" id="searchLayer">
+      <button class="close-layer" id="closeSearch">✕</button>
+      <p class="kicker">DISCOVER YOUR NEXT SKILL</p>
+      <label for="globalSearch"> What will you learn next? </label>
+      <input
+        autocomplete="off"
+        id="globalSearch"
+        placeholder="Search courses, skills, topics…"
+      />
+      <div id="searchResults"></div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside
+      aria-label="Your cart"
+      aria-modal="true"
+      class="cart-drawer"
+      id="cartDrawer"
+      role="dialog"
+    >
+      <div class="cart-panel-head">
+        <h2>
+          Your cart
+          <span id="cartHeadingCount"> (items: 0) </span>
+        </h2>
+        <button aria-label="Close cart" class="cart-x" id="closeCart">×</button>
+      </div>
+      <div class="cart-panel-items" id="cartItems"></div>
+      <div class="cart-panel-bottom">
+        <div class="cart-total">
+          <strong> Subtotal </strong>
+          <strong id="cartSubtotal"> AED 0.00 </strong>
+        </div>
+        <p class="cart-disclaimer">
+          Prices are indicative where available. Unpriced courses require a
+          quote; final fees must be confirmed with Tamkeen.
+        </p>
+        <div class="cart-actions">
+          <a class="cart-solid-btn" href="checkout.html"> Go to checkout </a>
+        </div>
+      </div>
+    </aside>
+    <main class="course-page">
+      <section class="course-detail-hero">
+        <div class="course-detail-copy">
+          <a class="course-back" href="index.html#featured-programs">
+            ← Back to featured programs
+          </a>
+          <span class="kicker"> AI · EDUCATION </span>
+          <h1>Training in Teaching Artificial Intelligence to Children</h1>
+          <p>
+            Build the confidence to introduce AI to children through playful
+            activities, age-appropriate tools, responsible use and engaging
+            lesson plans.
+          </p>
+          <div class="course-tags">
+            <span> 120 training hours </span>
+            <span> Online &amp; in person </span>
+            <span> Arabic &amp; English </span>
+            <span> Dubai / Ajman </span>
+          </div>
+          <div class="course-hero-actions">
+            <a class="button" href="#course-overview">
+              Explore the program ↓
+            </a>
+            <a class="course-outline-btn" href="contact.html">
+              Ask us about this course ↗
+            </a>
+          </div>
+        </div>
+        <div class="course-detail-photo">
+          <img
+            alt="Professional learning environment"
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&amp;q=85"
+          />
+          <div class="course-photo-label">
+            LEARN WITH PURPOSE
+            <span> ✳ </span>
+          </div>
+        </div>
+      </section>
+      <div class="course-subnav">
+        <a href="#course-overview"> Overview </a>
+        <a href="#course-topics"> Training topics </a>
+        <a href="#course-outcomes"> Outcomes </a>
+        <a href="#course-audience"> Who it’s for </a>
+        <a href="#course-faq"> FAQs </a>
+      </div>
+      <section class="course-overview" id="course-overview">
+        <div>
+          <span class="kicker"> YOUR NEXT SKILL </span>
+          <h2>
+            Learning with
+            <em> real-world impact. </em>
+          </h2>
+          <p>
+            Build the confidence to introduce AI to children through playful
+            activities, age-appropriate tools, responsible use and engaging
+            lesson plans.
+          </p>
+          <p class="course-source-note">
+            Course details summarized from Tamkeen’s published listing. Prices
+            and availability may change; please confirm before booking.
+          </p>
+        </div>
+        <aside class="course-fee">
+          <span class="kicker"> PUBLISHED PROGRAM FEE </span>
+          <div class="course-price">AED 2,750</div>
+          <div class="course-old">Previously listed AED 5,000 · 45% off</div>
+          <div class="course-fee-rule"></div>
+          <p>3 professional certificates + membership card listed by Tamkeen</p>
+          <a class="button" href="contact.html"> Enquire about enrollment ↗ </a>
+          <a
+            aria-label="Ask Tamkeen about this course on WhatsApp"
+            class="course-whatsapp-button"
+            href="https://wa.me/971505057160"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="20"
+              src="assets/social/whatsapp.svg"
+              width="20"
+            />
+            Ask on WhatsApp
+          </a>
+          <small>
+            Enquiries only. No payment or live booking is connected to this
+            prototype.
+          </small>
+        </aside>
+      </section>
+      <section class="course-topics-wrap" id="course-topics">
+        <div class="course-section-head">
+          <span class="kicker"> THE LEARNING JOURNEY </span>
+          <h2>
+            What you'll
+            <em> explore. </em>
+          </h2>
+          <p>12 key topics drawn from the published course outline.</p>
+        </div>
+        <div class="course-topics">
+          <details class="course-topic">
+            <summary>
+              <span> 01 </span>
+              Why AI for children: the UAE curriculum and the future
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 02 </span>
+              Simplifying AI concepts by age
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 03 </span>
+              Unplugged activities: AI through play
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 04 </span>
+              How machines learn: explaining it to the child
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 05 </span>
+              Machine learning with visual tools for children
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 06 </span>
+              Vision and image recognition for young ones
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 07 </span>
+              Audio and language AI for children
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 08 </span>
+              Safe generative AI for children
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 09 </span>
+              Ethics and bias: teaching them to young ones
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 10 </span>
+              Digital safety in the AI age
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 11 </span>
+              Children’s creative AI projects
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+          <details class="course-topic">
+            <summary>
+              <span> 12 </span>
+              Lesson design, assessment and a ready short curriculum
+              <b> + </b>
+            </summary>
+            <p>Part of the official program training curriculum.</p>
+          </details>
+        </div>
+      </section>
+      <section class="course-outcomes" id="course-outcomes">
+        <div class="course-section-head">
+          <span class="kicker"> WHAT YOU WILL LEARN </span>
+          <h2>
+            Skills to take
+            <em> forward. </em>
+          </h2>
+        </div>
+        <ol>
+          <li>Explain AI concepts to children at different ages</li>
+          <li>
+            Design unplugged activities and visual machine-learning projects
+          </li>
+          <li>Introduce generative AI safely and responsibly</li>
+          <li>Teach fairness, privacy and digital safety</li>
+          <li>Create age-appropriate lessons and a short curriculum</li>
+        </ol>
+      </section>
+      <section class="course-audience" id="course-audience">
+        <div>
+          <span class="kicker"> MADE FOR YOU </span>
+          <h2>
+            Who is this
+            <em> for? </em>
+          </h2>
+        </div>
+        <ul>
+          <li>Primary, technology and science teachers</li>
+          <li>Parents and children’s club trainers</li>
+          <li>STEM, robotics and gifted-education teachers</li>
+          <li>Curriculum developers and education graduates</li>
+        </ul>
+      </section>
+      <section class="course-faq-wrap" id="course-faq">
+        <div class="course-section-head">
+          <span class="kicker"> GOOD TO KNOW </span>
+          <h2>
+            Frequently asked
+            <em> questions. </em>
+          </h2>
+        </div>
+        <details class="course-faq">
+          <summary>
+            Do I need an AI background?
+            <span> + </span>
+          </summary>
+          <p>
+            No. The program focuses on how to teach AI concepts to children,
+            rather than advanced programming.
+          </p>
+        </details>
+        <details class="course-faq">
+          <summary>
+            What age range does it address?
+            <span> + </span>
+          </summary>
+          <p>
+            Approximately ages 6–14, with different activities for different
+            developmental stages.
+          </p>
+        </details>
+        <details class="course-faq">
+          <summary>
+            Does it include a practical outcome?
+            <span> + </span>
+          </summary>
+          <p>
+            Yes. The official listing describes a ready eight-lesson curriculum.
+          </p>
+        </details>
+      </section>
+      <section class="course-next">
+        <span class="kicker"> TAKE THE NEXT STEP </span>
+        <h2>
+          Make learning
+          <em> your next move. </em>
+        </h2>
+        <a class="button button-light" href="contact.html">
+          Contact Tamkeen ↗
+        </a>
+        <a class="course-more" href="index.html#featured-programs">
+          ← View other featured programs
+        </a>
+      </section>
+      <div class="course-cart-action">
+        <button
+          class="course-add-cart"
+          data-add-course="teaching-ai-children"
+          type="button"
+        >
+          Add to cart +
+        </button>
+      </div>
+    </main>
+    <footer class="site-footer compact-footer">
+      <div aria-hidden="true" class="footer-art"></div>
+      <div class="footer-content">
+        <div class="footer-row">
+          <div class="footer-brand">
+            <img
+              alt="Tamkeen Training Center logo"
+              class="tamkeen-logo-footer"
+              src="assets/tamkeen-footer-logo.png"
+            />
+            <p>Empowering minds. Shaping what’s next.</p>
+          </div>
+          <nav aria-label="Footer navigation" class="footer-nav">
+            <div class="footer-link-group">
+              <h3>Explore</h3>
+              <a href="index.html"> Home </a>
+              <a href="about.html"> About </a>
+              <a href="programs.html"> Programs </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Tamkeen</h3>
+              <a href="gallery.html"> Gallery </a>
+              <a href="media.html"> Media center </a>
+              <a href="family.html"> Our family </a>
+              <a href="certificate.html"> Verify a certificate </a>
+            </div>
+            <div class="footer-link-group">
+              <h3>Get in touch</h3>
+              <a href="contact.html"> Dubai &amp; Ajman </a>
+              <a href="tel:+971505057160"> +971 50 505 7160 </a>
+              <a href="contact.html"> Email us </a>
+              <a href="contact.html"> Support </a>
+              <a href="contact.html"> Complaints </a>
+            </div>
+          </nav>
+        </div>
+        <div aria-label="Social media" class="footer-social">
+          <a
+            aria-label="Instagram"
+            data-placeholder="ADD YOUR INSTAGRAM LINK HERE"
+            href="#"
+            title="Instagram"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/instagram.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="WhatsApp"
+            href="https://wa.me/971505057160"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="WhatsApp"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/whatsapp.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="TikTok"
+            data-placeholder="ADD YOUR TIKTOK LINK HERE"
+            href="#"
+            title="TikTok"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/tiktok.svg"
+              width="24"
+            />
+          </a>
+          <a
+            aria-label="Facebook"
+            data-placeholder="ADD YOUR FACEBOOK LINK HERE"
+            href="#"
+            title="Facebook"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="assets/social/facebook.svg"
+              width="24"
+            />
+          </a>
+        </div>
+        <p class="footer-note">
+          <span> © Tamkeen Training Center · Concept redesign </span>
+          <span class="footer-legal-links">
+            <a href="#"> Privacy </a>
+            ·
+            <a href="refund-policy.html"> Refund policy </a>
+            ·
+            <a href="contact.html"> Contact </a>
+          </span>
+        </p>
+      </div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      /* A fresh Programs navigation clears saved filters; browser Back retains catalog position. */
+      document.addEventListener(
+        "click",
+        function (event) {
+          var link = event.target.closest("a[href]");
+          if (!link) return;
+          try {
+            var target = new URL(link.href, location.href);
+            if (
+              target.origin === location.origin &&
+              /\/programs\.html$/.test(target.pathname) &&
+              !target.search
+            ) {
+              sessionStorage.setItem("tamkeen-programs-explicit-reset", "1");
+            }
+          } catch (e) {}
+        },
+        true,
+      );
+    </script>
+    <script src="js/program-catalog-data.js"></script>
+    <script src="js/tamkeen-chatbot-config.js"></script>
+    <script defer="" src="js/tamkeen-chatbot.js"></script>
+  </body>
+</html>
