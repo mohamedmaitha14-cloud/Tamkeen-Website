@@ -49,9 +49,7 @@
       try {
         localStorage.setItem("tamkeenBlueSaved", JSON.stringify(ids));
       } catch (e) {}
-      document
-        .getElementById("cartCount")
-        ?.replaceChildren(document.createTextNode(String(ids.length)));
+      window.TamkeenRefreshCart?.();
       overlay.classList.add("is-open");
       document.body.style.overflow = "hidden";
       overlay.querySelector(".booking-choice-continue").focus();

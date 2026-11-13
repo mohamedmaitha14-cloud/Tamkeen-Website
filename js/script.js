@@ -1,16 +1,17 @@
 (() => {
   "use strict";
   const courses = [
-    ...(window.COURSES || []),
     ...(window.TAMKEEN_CATALOG || []).map((c) => ({
       slug: "catalog-" + c.catalog_id,
+      catalog_id: c.catalog_id,
       title: c.title_en || c.title,
       category: (c.departments || []).join(", ") || c.category,
       price: c.price ?? 0,
       image: c.image,
       duration: "Online · Dubai · Ajman",
-      local_page: "course-details.html?catalog=" + c.catalog_id,
+      local_page: c.local || "course-details.html?catalog=" + c.catalog_id,
     })),
+    ...(window.COURSES || []),
   ];
   const $ = (s) => document.querySelector(s);
   const $$ = (s) => [...document.querySelectorAll(s)];
@@ -21,7 +22,8 @@
   });
   const getSaved = () => {
     try {
-      return JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
+      const saved = JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
+      return Array.isArray(saved) ? [...new Set(saved.filter((id) => typeof id === "string"))] : [];
     } catch {
       return [];
     }
@@ -30,12 +32,32 @@
     localStorage.setItem("tamkeenBlueSaved", JSON.stringify(arr));
     renderCart();
   };
-  const href = (c) =>
-    c.local_page || "course-details.html?course=" + encodeURIComponent(c.slug);
+  const featuredCatalogIds = new Set([1, 4, 17, 22, 24, 26, 29]);
+
+  // Use the same course destinations as the Programs catalog.
+  // Catalog entries may have a generic `local` fallback even when a
+  // dedicated featured information page exists.
+  const href = (course) => {
+    const catalogId = Number(course.catalog_id);
+
+    if (Number.isInteger(catalogId) && catalogId > 0) {
+      if (featuredCatalogIds.has(catalogId)) {
+        return `course-featured-${catalogId}.html`;
+      }
+
+      return `course-details.html?catalog=${encodeURIComponent(catalogId)}`;
+    }
+
+    return (
+      course.local_page ||
+      `course-details.html?course=${encodeURIComponent(course.slug)}`
+    );
+  };
   const cartQtyKey = "tamkeenBlueCartQty";
   const getQty = () => {
     try {
-      return JSON.parse(localStorage.getItem(cartQtyKey) || "{}");
+      const quantities = JSON.parse(localStorage.getItem(cartQtyKey) || "{}");
+      return quantities && typeof quantities === "object" && !Array.isArray(quantities) ? quantities : {};
     } catch {
       return {};
     }
@@ -61,13 +83,14 @@
         })[ch],
     );
   function renderCart() {
-    const ids = getSaved().filter((id) => courses.some((c) => c.slug === id));
+    const ids = getSaved();
+    const knownIds = ids.filter((id) => courses.some((c) => c.slug === id));
     const qty = getQty();
     const count = ids.reduce(
       (n, id) => n + Math.max(1, Number(qty[id]) || 1),
       0,
     );
-    const total = ids.reduce((n, id) => {
+    const total = knownIds.reduce((n, id) => {
       const c = courses.find((x) => x.slug === id);
       return n + priceOf(c) * Math.max(1, Number(qty[id]) || 1);
     }, 0);
@@ -80,8 +103,15 @@
       el.innerHTML = ids.length
         ? ids
             .map((id) => {
-              const c = courses.find((x) => x.slug === id),
-                q = Math.max(1, Number(qty[id]) || 1);
+              const c = courses.find((x) => x.slug === id) || {
+                slug: id,
+                title: "Saved program (details unavailable)",
+                category: "Training program",
+                price: 0,
+                image: "assets/tamkeen-official-logo.png",
+                local_page: "programs.html",
+              };
+              const q = Math.max(1, Number(qty[id]) || 1);
               return `<div class="cart-product"><a href="${href(c)}" class="cart-product-image"><img src="${esc(c.image)}" alt="${esc(c.title)}" loading="lazy"></a><div class="cart-product-main"><a class="cart-product-title" href="${href(c)}">${esc(c.title)}</a><span class="cart-product-category">${esc(c.category)}</span><div class="cart-product-controls"><div class="cart-qty"><button data-qty-action="minus" data-qty-id="${encodeURIComponent(id)}" aria-label="Decrease quantity of ${esc(c.title)}">−</button><span>${q}</span><button data-qty-action="plus" data-qty-id="${encodeURIComponent(id)}" aria-label="Increase quantity of ${esc(c.title)}">+</button></div><button class="cart-remove" data-remove="${encodeURIComponent(id)}" aria-label="Remove ${esc(c.title)}" title="Remove">♧</button></div></div><div class="cart-product-price">${priceOf(c) ? money(priceOf(c) * q) : "Price on request"}</div></div>`;
             })
             .join("")
@@ -121,7 +151,7 @@
       checkout.innerHTML = ids.length
         ? ids
             .map((id) => {
-              const c = courses.find((x) => x.slug === id);
+              const c = courses.find((x) => x.slug === id) || { title: "Saved program (details unavailable)", price: 0 };
               return `<div class="checkout-line"><span>${esc(c.title)} × ${Math.max(1, Number(qty[id]) || 1)}</span><strong>${priceOf(c) ? money(priceOf(c) * Math.max(1, Number(qty[id]) || 1)) : "Price on request"}</strong></div>`;
             })
             .join("") +
@@ -129,6 +159,12 @@
         : '<p>Your cart is empty. <a href="programs.html">Browse programs</a></p>';
   }
   window.TamkeenRefreshCart = renderCart;
+  window.addEventListener("storage", (event) => {
+    if (!event.key || ["tamkeenBlueSaved", cartQtyKey].includes(event.key)) {
+      renderCart();
+    }
+  });
+  window.addEventListener("pageshow", renderCart);
   renderCart();
   $("#menuBtn")?.addEventListener("click", () =>
     $("#mobileMenu").classList.toggle("open"),
@@ -154,18 +190,36 @@
     $("#cartDrawer").classList.remove("open");
     $("#cartOverlay").classList.remove("open");
   });
-  function courseRow(c) {
-    return `<a class="search-result" href="${href(c)}"><span>${c.category}</span><strong>${c.title}</strong><b>↗</b></a>`;
+  function courseRow(course) {
+    return `<a class="search-result" href="${esc(href(course))}"><span>${esc(course.category)}</span><strong>${esc(course.title)}</strong><b>↗</b></a>`;
   }
-  $("#globalSearch")?.addEventListener("input", (e) => {
-    const q = e.target.value.toLowerCase().trim();
-    $("#searchResults").innerHTML = q
-      ? courses
-          .filter((c) => (c.title + " " + c.category).toLowerCase().includes(q))
-          .slice(0, 6)
-          .map(courseRow)
-          .join("") || "<p>No matching programs found.</p>"
-      : "";
+
+  // Keep the existing live search, but use the canonical catalog records
+  // and their correct information-page URLs. Avoid duplicate suggestions.
+  $("#globalSearch")?.addEventListener("input", (event) => {
+    const query = event.target.value.toLowerCase().trim();
+    const results = $("#searchResults");
+    if (!results) return;
+
+    if (!query) {
+      results.innerHTML = "";
+      return;
+    }
+
+    const matches = courses.filter((course) =>
+      `${course.title} ${course.category}`.toLowerCase().includes(query),
+    );
+    const seen = new Set();
+    const uniqueMatches = matches.filter((course) => {
+      const key = course.title.toLowerCase().trim();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
+    results.innerHTML =
+      uniqueMatches.slice(0, 6).map(courseRow).join("") ||
+      "<p>No matching programs found.</p>";
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
@@ -385,6 +439,7 @@
       }
       if (!ids.includes(id)) ids.push(id);
       localStorage.setItem("tamkeenBlueSaved", JSON.stringify(ids));
+      window.TamkeenRefreshCart?.();
       b.textContent = "Added to cart ✓";
       document.getElementById("cartBtn")?.click();
       location.hash = "";
