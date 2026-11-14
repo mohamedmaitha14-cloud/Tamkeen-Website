@@ -223,3 +223,12 @@
     height: min(610px, calc(100dvh - 90px));
   }
 }
+
+/* Drawer-aware chatbot: hide on narrow screens, reposition on wide screens. */
+.tk-chat {
+  transition: right 180ms ease;
+}
+
+.tk-chat.tk-chat-drawer-hidden {
+  display: none !important;
+}

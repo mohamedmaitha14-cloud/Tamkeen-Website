@@ -356,9 +356,59 @@
   function toggle(open) {
     panel.hidden = !open;
     launcher.setAttribute("aria-expanded", String(open));
-    if (open) input.focus();
-    else launcher.focus();
+    syncChatWithDrawers();
+    if (open && !root.classList.contains("tk-chat-drawer-hidden")) input.focus();
+    else if (!open && !root.classList.contains("tk-chat-drawer-hidden")) launcher.focus();
   }
+  // Keep the assistant clear of the menu and shopping cart drawers.
+  // On wide screens it sits to the left; on narrow screens it hides.
+  const sideDrawers = ["mobileMenu", "cartDrawer"];
+
+  function syncChatWithDrawers() {
+    const viewportWidth = document.documentElement.clientWidth;
+    const openDrawers = sideDrawers
+      .map((id) => document.getElementById(id))
+      .filter((drawer) => drawer && drawer.classList.contains("open"));
+
+    root.classList.remove("tk-chat-drawer-hidden");
+    root.style.removeProperty("right");
+
+    if (!openDrawers.length) return;
+
+    // Find the leftmost edge when more than one drawer is open.
+    const drawerLeft = Math.min(
+      ...openDrawers.map((drawer) => drawer.getBoundingClientRect().left),
+    );
+    const gap = 16;
+    const margin = 12;
+    const launcherWidth = Math.ceil(launcher.getBoundingClientRect().width);
+    const requiredWidth = panel.hidden
+      ? launcherWidth
+      : Math.min(425, viewportWidth - 28);
+    const availableWidth = drawerLeft - gap - margin;
+
+    // Hide instead of squeezing the chat over the page or drawer.
+    if (viewportWidth <= 600 || availableWidth < requiredWidth) {
+      root.classList.add("tk-chat-drawer-hidden");
+      return;
+    }
+
+    root.style.right = `${Math.ceil(viewportWidth - drawerLeft + gap)}px`;
+  }
+
+  sideDrawers.forEach((id) => {
+    const drawer = document.getElementById(id);
+    if (!drawer) return;
+    new MutationObserver(syncChatWithDrawers).observe(drawer, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  });
+
+  window.addEventListener("resize", syncChatWithDrawers);
+  window.addEventListener("pageshow", syncChatWithDrawers);
+  syncChatWithDrawers();
+
   launcher.addEventListener("click", () => toggle(panel.hidden));
   close.addEventListener("click", () => toggle(false));
   document.addEventListener("keydown", (e) => {
