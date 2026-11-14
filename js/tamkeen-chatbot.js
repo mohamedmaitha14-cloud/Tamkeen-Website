@@ -362,7 +362,11 @@
   }
   // Keep the assistant clear of the menu and shopping cart drawers.
   // On wide screens it sits to the left; on narrow screens it hides.
+  // Keep Ask Tamkeen clear of the navigation menu and cart drawer.
+  // A MutationObserver watches the actual drawer classes used by this website.
   const sideDrawers = ["mobileMenu", "cartDrawer"];
+  const drawerGap = 20;
+  const screenMargin = 16;
 
   function syncChatWithDrawers() {
     const viewportWidth = document.documentElement.clientWidth;
@@ -370,40 +374,44 @@
       .map((id) => document.getElementById(id))
       .filter((drawer) => drawer && drawer.classList.contains("open"));
 
-    root.classList.remove("tk-chat-drawer-hidden");
+    root.classList.remove("tk-chat-drawer-hidden", "tk-chat-drawer-shifted");
     root.style.removeProperty("right");
 
-    if (!openDrawers.length) return;
+    if (openDrawers.length === 0) return;
 
-    // Find the leftmost edge when more than one drawer is open.
-    const drawerLeft = Math.min(
-      ...openDrawers.map((drawer) => drawer.getBoundingClientRect().left),
-    );
-    const gap = 16;
-    const margin = 12;
-    const launcherWidth = Math.ceil(launcher.getBoundingClientRect().width);
-    const requiredWidth = panel.hidden
-      ? launcherWidth
-      : Math.min(425, viewportWidth - 28);
-    const availableWidth = drawerLeft - gap - margin;
-
-    // Hide instead of squeezing the chat over the page or drawer.
-    if (viewportWidth <= 600 || availableWidth < requiredWidth) {
+    // On phones the assistant should not cover the drawer's action buttons.
+    if (viewportWidth <= 600) {
       root.classList.add("tk-chat-drawer-hidden");
       return;
     }
 
-    root.style.right = `${Math.ceil(viewportWidth - drawerLeft + gap)}px`;
+    // Drawer positions can be animated, so use their final layout width rather
+    // than the current transformed rectangle while the drawer slides in.
+    const drawerLeft = Math.min(
+      ...openDrawers.map((drawer) => viewportWidth - drawer.offsetWidth),
+    );
+    const spaceBeforeDrawer = drawerLeft - drawerGap - screenMargin;
+    const launcherWidth = Math.ceil(launcher.getBoundingClientRect().width);
+    const panelWidth = Math.min(425, viewportWidth - 28);
+    const neededWidth = panel.hidden ? launcherWidth : panelWidth;
+
+    if (spaceBeforeDrawer < neededWidth) {
+      root.classList.add("tk-chat-drawer-hidden");
+      return;
+    }
+
+    root.classList.add("tk-chat-drawer-shifted");
+    root.style.right = `${Math.ceil(viewportWidth - drawerLeft + drawerGap)}px`;
   }
 
-  sideDrawers.forEach((id) => {
+  for (const id of sideDrawers) {
     const drawer = document.getElementById(id);
-    if (!drawer) return;
+    if (!drawer) continue;
     new MutationObserver(syncChatWithDrawers).observe(drawer, {
       attributes: true,
       attributeFilter: ["class"],
     });
-  });
+  }
 
   window.addEventListener("resize", syncChatWithDrawers);
   window.addEventListener("pageshow", syncChatWithDrawers);

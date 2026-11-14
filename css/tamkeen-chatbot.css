@@ -232,3 +232,18 @@
 .tk-chat.tk-chat-drawer-hidden {
   display: none !important;
 }
+
+/* Respect open navigation/cart drawers at every viewport size. */
+.tk-chat.tk-chat-drawer-shifted {
+  z-index: 190;
+}
+
+.tk-chat.tk-chat-drawer-hidden {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-chat {
+    transition: none;
+  }
+}
