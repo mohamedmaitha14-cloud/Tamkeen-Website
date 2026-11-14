@@ -4,13 +4,7 @@
   const review = document.getElementById("checkoutCartItems");
   const message = document.getElementById("checkoutCartMessage");
   const form = document.getElementById("tamkeenCheckoutForm");
-  const readIds = () => {
-    try {
-      return JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
-    } catch {
-      return [];
-    }
-  };
+  const readIds = () => window.TamkeenCart.ids();
   const hasItems = () => readIds().length > 0;
   const scrollTop = () =>
     document

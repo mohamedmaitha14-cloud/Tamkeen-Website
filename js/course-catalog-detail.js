@@ -427,13 +427,7 @@
     book.addEventListener("click", (event) => {
       event.preventDefault();
       const slug = "catalog-" + x.catalog_id;
-      let ids = [];
-      try {
-        ids = JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
-        if (!Array.isArray(ids)) ids = [];
-      } catch (e) {}
-      if (!ids.includes(slug)) ids.push(slug);
-      localStorage.setItem("tamkeenBlueSaved", JSON.stringify(ids));
+      window.TamkeenCart.add(slug);
       window.location.href = "checkout.html";
     });
   }

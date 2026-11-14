@@ -305,15 +305,7 @@
     const btn = event.target.closest("[data-catalog-add]");
     if (btn) {
       const id = "catalog-" + btn.dataset.catalogAdd;
-      let ids = [];
-      try {
-        ids = JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
-        if (!Array.isArray(ids)) ids = [];
-      } catch (e) {}
-      if (!ids.includes(id)) {
-        ids.push(id);
-        localStorage.setItem("tamkeenBlueSaved", JSON.stringify(ids));
-      }
+      window.TamkeenCart.add(id);
       window.TamkeenRefreshCart?.();
       document.getElementById("cartBtn")?.click();
       btn.innerHTML = "Added to Cart ✓";

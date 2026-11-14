@@ -8084,3 +8084,11 @@ body[data-page="programs"] .tc-actions .tc-add-cart:focus-visible {
   opacity: 0.65;
   cursor: wait;
 }
+
+/* Customer account controls */
+.tamkeen-auth-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.tamkeen-auth-tabs button { border: 1px solid #b6cbd9; border-radius: 9px; background: white; color: #173d5f; padding: 10px 14px; font: inherit; cursor: pointer; }
+.tamkeen-auth-tabs button.is-active { background: #173d5f; color: white; }
+#tamkeen-account-panel { display: grid; gap: 12px; padding: 16px 0; }
+#tamkeen-account-panel[hidden], .tamkeen-auth-tabs[hidden], #tamkeen-auth-form[hidden], [data-auth-password][hidden] { display: none !important; }
+#tamkeen-auth-feedback { min-height: 1.5em; overflow-wrap: anywhere; }

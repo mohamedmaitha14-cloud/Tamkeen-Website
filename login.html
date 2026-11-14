@@ -254,25 +254,29 @@
           <br />
           <em> back. </em>
         </h1>
-        <p>
-          This is a visual preview. Account authentication must connect to
-          Tamkeen's official platform.
-        </p>
-        <form class="utility-form demo-form">
-          <label>
-            Email
-            <input placeholder="Email address" required="" type="email" />
+        <p>Sign in to save your selected training programs securely to your account.</p>
+        <div class="tamkeen-auth-tabs" role="group" aria-label="Account action">
+          <button type="button" class="is-active" data-auth-mode="login">Sign in</button>
+          <button type="button" data-auth-mode="register">Create account</button>
+          <button type="button" data-auth-mode="reset">Reset password</button>
+        </div>
+        <form id="tamkeen-auth-form" class="utility-form">
+          <label>Email
+            <input name="email" type="email" autocomplete="email" placeholder="Email address" required />
           </label>
-          <label>
-            Password
-            <input placeholder="Password" required="" type="password" />
+          <label data-auth-password>Password
+            <input name="password" type="password" autocomplete="current-password" minlength="6" placeholder="Password" required />
           </label>
-          <button class="button" type="submit">Continue ↗</button>
-          <p class="form-feedback" role="status"></p>
+          <button class="button" type="submit" data-auth-submit>Sign in ↗</button>
+          <p id="tamkeen-auth-feedback" class="form-feedback" role="status" aria-live="polite"></p>
         </form>
-        <a class="text-action" href="contact.html">
-          Continue on contact team ↗
-        </a>
+        <div id="tamkeen-account-panel" hidden>
+          <p>Signed in as <strong id="tamkeen-account-email"></strong></p>
+          <p>Your selected programs are saved privately to your account.</p>
+          <button class="button" type="button" id="tamkeen-signout">Sign out</button>
+          <a class="text-action" href="cart.html">View your cart ↗</a>
+        </div>
+        <a class="text-action" href="contact.html">Need assistance? Contact Tamkeen ↗</a>
       </section>
     </main>
     <footer class="site-footer compact-footer">
@@ -384,7 +388,10 @@
     </footer>
     <script src="js/data.js"></script>
     <script src="js/program-catalog-data.js"></script>
+    <script src="js/supabase-inquiry-config.js"></script>
+    <script src="js/tamkeen-customer-cart.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/tamkeen-auth-page.js"></script>
     <script>
       /* A fresh Programs navigation clears saved filters; browser Back retains catalog position. */
       document.addEventListener(

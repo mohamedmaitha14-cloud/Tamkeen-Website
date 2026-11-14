@@ -40,15 +40,7 @@
       event.stopImmediatePropagation();
       const id = courseId();
       if (!id) return;
-      let ids = [];
-      try {
-        ids = JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
-        if (!Array.isArray(ids)) ids = [];
-      } catch (e) {}
-      if (!ids.includes(id)) ids.push(id);
-      try {
-        localStorage.setItem("tamkeenBlueSaved", JSON.stringify(ids));
-      } catch (e) {}
+      window.TamkeenCart.add(id);
       window.TamkeenRefreshCart?.();
       overlay.classList.add("is-open");
       document.body.style.overflow = "hidden";

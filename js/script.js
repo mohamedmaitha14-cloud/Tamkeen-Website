@@ -20,18 +20,8 @@
     if (a.dataset.nav === (page === "index" ? "home" : page))
       a.classList.add("active");
   });
-  const getSaved = () => {
-    try {
-      const saved = JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
-      return Array.isArray(saved) ? [...new Set(saved.filter((id) => typeof id === "string"))] : [];
-    } catch {
-      return [];
-    }
-  };
-  const save = (arr) => {
-    localStorage.setItem("tamkeenBlueSaved", JSON.stringify(arr));
-    renderCart();
-  };
+  const getSaved = () => window.TamkeenCart.ids();
+  const save = (arr) => window.TamkeenCart.setIds(arr);
   const featuredCatalogIds = new Set([1, 4, 17, 22, 24, 26, 29]);
 
   // Use the same course destinations as the Programs catalog.
@@ -53,15 +43,7 @@
       `course-details.html?course=${encodeURIComponent(course.slug)}`
     );
   };
-  const cartQtyKey = "tamkeenBlueCartQty";
-  const getQty = () => {
-    try {
-      const quantities = JSON.parse(localStorage.getItem(cartQtyKey) || "{}");
-      return quantities && typeof quantities === "object" && !Array.isArray(quantities) ? quantities : {};
-    } catch {
-      return {};
-    }
-  };
+  const getQty = () => window.TamkeenCart.quantities();
   const money = (n) =>
     "AED " +
     n.toLocaleString("en-AE", {
@@ -139,7 +121,7 @@
             b.dataset.qtyAction === "plus"
               ? Math.min(99, v + 1)
               : Math.max(1, v - 1);
-          localStorage.setItem(cartQtyKey, JSON.stringify(obj));
+          window.TamkeenCart.setQuantity(id, obj[id]);
           renderCart();
         }),
     );
@@ -160,10 +142,11 @@
   }
   window.TamkeenRefreshCart = renderCart;
   window.addEventListener("storage", (event) => {
-    if (!event.key || ["tamkeenBlueSaved", cartQtyKey].includes(event.key)) {
+    if (!event.key) {
       renderCart();
     }
   });
+  window.addEventListener("tamkeen-cart-changed", renderCart);
   window.addEventListener("pageshow", renderCart);
   renderCart();
   $("#menuBtn")?.addEventListener("click", () =>
@@ -431,15 +414,7 @@
   document.querySelectorAll("[data-add-course]").forEach((b) =>
     b.addEventListener("click", () => {
       const id = b.dataset.addCourse;
-      let ids;
-      try {
-        ids = JSON.parse(localStorage.getItem("tamkeenBlueSaved") || "[]");
-      } catch {
-        ids = [];
-      }
-      if (!ids.includes(id)) ids.push(id);
-      localStorage.setItem("tamkeenBlueSaved", JSON.stringify(ids));
-      window.TamkeenRefreshCart?.();
+       window.TamkeenCart.add(id);
       b.textContent = "Added to cart ✓";
       document.getElementById("cartBtn")?.click();
       location.hash = "";
