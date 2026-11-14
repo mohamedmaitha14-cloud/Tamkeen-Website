@@ -49,6 +49,81 @@
         margin: 8px 0 12px;
         border-radius: 999px;
       }
+
+      /* ===== Account page: right-side welcome and readable account details ===== */
+      body[data-page="login"] .utility-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: clamp(36px, 6vw, 110px);
+        align-items: center;
+        padding: clamp(90px, 9vw, 145px) 8%;
+        min-height: 760px;
+      }
+      body[data-page="login"] .account-welcome-side {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+        align-self: center;
+        min-width: 0;
+      }
+      body[data-page="login"] .account-welcome-side h1 {
+        font-size: clamp(5.5rem, 9.5vw, 11rem);
+        line-height: .98;
+        letter-spacing: -.065em;
+        margin: 30px 0;
+      }
+      body[data-page="login"] .account-welcome-side h1 em {
+        color: #4a83ab;
+      }
+      body[data-page="login"] .account-details-side {
+        grid-column: 1;
+        grid-row: 1;
+        min-width: 0;
+        align-self: center;
+      }
+      body[data-page="login"] .account-details-side .account-intro,
+      body[data-page="login"] #tamkeen-account-panel > p {
+        font-size: clamp(1.05rem, 1.25vw, 1.3rem);
+        line-height: 1.7;
+        max-width: 100%;
+      }
+      body[data-page="login"] #tamkeen-account-panel > a.text-action,
+      body[data-page="login"] .account-help {
+        font-size: .95rem;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+      body[data-page="login"] #tamkeen-account-panel > a.text-action > span {
+        font-size: inherit;
+        padding-bottom: 7px;
+      }
+      body[data-page="login"] .account-help {
+        display: inline-flex;
+        width: max-content;
+        max-width: 100%;
+        padding: 0 0 7px;
+        margin-top: 8px;
+        border-bottom-width: 1px;
+      }
+      @media (max-width: 900px) {
+        body[data-page="login"] .utility-hero {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 30px;
+          min-height: 0;
+          padding: 105px 7% 75px;
+        }
+        body[data-page="login"] .account-welcome-side {
+          grid-column: 1;
+          grid-row: 1;
+        }
+        body[data-page="login"] .account-welcome-side h1 {
+          font-size: clamp(4.5rem, 13vw, 8rem);
+        }
+        body[data-page="login"] .account-details-side {
+          grid-column: 1;
+          grid-row: 2;
+        }
+      }
     </style>
   </head>
   <body data-page="login">
@@ -281,13 +356,16 @@
     </aside>
     <main>
       <section class="utility-hero">
-        <span class="kicker"> YOUR LEARNING SPACE </span>
+        <div class="account-welcome-side">
+          <span class="kicker"> YOUR LEARNING SPACE </span>
         <h1>
           Welcome
           <br />
           <em> back. </em>
         </h1>
-        <p>Sign in to save your selected training programs securely to your account.</p>
+        </div>
+        <div class="account-details-side">
+        <p class="account-intro">Sign in to save your selected training programs securely to your account.</p>
         <div class="tamkeen-auth-tabs" role="group" aria-label="Account action">
           <button type="button" class="is-active" data-auth-mode="login">Sign in</button>
           <button type="button" data-auth-mode="register">Create account</button>
@@ -312,7 +390,8 @@
           <a class="text-action" href="cart.html"><span>View your cart ↗</span></a>
           <a class="text-action" href="purchase-history.html"><span>Purchase History ↗</span></a>
         </div>
-        <a class="text-action" href="contact.html">Need assistance? Contact Tamkeen ↗</a>
+        <a class="text-action account-help" href="contact.html">Need assistance? Contact Tamkeen ↗</a>
+        </div>
       </section>
     </main>
     <footer class="site-footer compact-footer">
