@@ -18,20 +18,28 @@
     <link rel="icon" type="image/png" sizes="256x256" href="assets/tamkeen-favicon.png" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
     <style>
-      /* Account navigation: underline only the link text, not the page width. */
-      body[data-page="login"] #tamkeen-account-panel .text-action {
-        display: table;
-        width: auto;
+      /* Links are grid children: prevent grid stretching and put border on text only. */
+      body[data-page="login"] #tamkeen-account-panel > a.text-action {
+        display: inline-flex;
+        justify-self: start;
+        align-self: start;
+        width: max-content;
         max-width: 100%;
-        margin: 14px 0 0;
-        padding: 0 0 7px;
-        border-bottom: 1px solid #5488b2;
+        margin: 4px 0 0;
+        padding: 0;
+        border: 0;
         text-decoration: none;
       }
-
-      /* Compact sign-out control instead of a full-width button. */
+      body[data-page="login"] #tamkeen-account-panel > a.text-action > span {
+        display: inline-block;
+        border-bottom: 1px solid #5488b2;
+        padding-bottom: 7px;
+      }
+      /* Keep sign-out button compact within the grid. */
       body[data-page="login"] #tamkeen-signout {
         display: inline-flex;
+        justify-self: start;
+        align-self: start;
         align-items: center;
         justify-content: center;
         width: 150px;
@@ -299,10 +307,10 @@
           <p>Signed in as <strong id="tamkeen-account-email"></strong></p>
           <p>Your selected programs are saved privately to your account.</p>
           <button class="button" type="button" id="tamkeen-signout">Sign out</button>
-          <a class="text-action" href="index.html">Home ↗</a>
-          <a class="text-action" href="programs.html">Programs ↗</a>
-          <a class="text-action" href="cart.html">View your cart ↗</a>
-          <a class="text-action" href="purchase-history.html">Purchase History ↗</a>
+          <a class="text-action" href="index.html"><span>Home ↗</span></a>
+          <a class="text-action" href="programs.html"><span>Programs ↗</span></a>
+          <a class="text-action" href="cart.html"><span>View your cart ↗</span></a>
+          <a class="text-action" href="purchase-history.html"><span>Purchase History ↗</span></a>
         </div>
         <a class="text-action" href="contact.html">Need assistance? Contact Tamkeen ↗</a>
       </section>
