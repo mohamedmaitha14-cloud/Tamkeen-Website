@@ -124,6 +124,46 @@
           grid-row: 2;
         }
       }
+
+      /* ===== Account quick links: two columns, two rows, spaced apart ===== */
+      body[data-page="login"] .account-navigation-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, max-content));
+        column-gap: clamp(32px, 4vw, 78px);
+        row-gap: 22px;
+        justify-content: start;
+        align-items: start;
+        margin: 20px 0 25px;
+      }
+      body[data-page="login"] .account-navigation-grid > a.text-action {
+        display: inline-flex;
+        width: max-content;
+        max-width: 100%;
+        justify-self: start;
+        align-self: start;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        text-decoration: none;
+        font-size: .95rem;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+      body[data-page="login"] .account-navigation-grid > a.text-action > span {
+        display: inline-block;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #5488b2;
+        font-size: inherit;
+      }
+      body[data-page="login"] .account-help {
+        margin-top: 8px;
+      }
+      @media (max-width: 480px) {
+        body[data-page="login"] .account-navigation-grid {
+          column-gap: 18px;
+          row-gap: 20px;
+        }
+      }
     </style>
   </head>
   <body data-page="login">
@@ -385,10 +425,12 @@
           <p>Signed in as <strong id="tamkeen-account-email"></strong></p>
           <p>Your selected programs are saved privately to your account.</p>
           <button class="button" type="button" id="tamkeen-signout">Sign out</button>
-          <a class="text-action" href="index.html"><span>Home ↗</span></a>
-          <a class="text-action" href="programs.html"><span>Programs ↗</span></a>
-          <a class="text-action" href="cart.html"><span>View your cart ↗</span></a>
-          <a class="text-action" href="purchase-history.html"><span>Purchase History ↗</span></a>
+          <div class="account-navigation-grid" aria-label="Account quick links">
+            <a class="text-action" href="index.html"><span>Home ↗</span></a>
+            <a class="text-action" href="programs.html"><span>Programs ↗</span></a>
+            <a class="text-action" href="cart.html"><span>View your cart ↗</span></a>
+            <a class="text-action" href="purchase-history.html"><span>Purchase History ↗</span></a>
+          </div>
         </div>
         <a class="text-action account-help" href="contact.html">Need assistance? Contact Tamkeen ↗</a>
         </div>
