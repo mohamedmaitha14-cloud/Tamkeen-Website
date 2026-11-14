@@ -8092,3 +8092,13 @@ body[data-page="programs"] .tc-actions .tc-add-cart:focus-visible {
 #tamkeen-account-panel { display: grid; gap: 12px; padding: 16px 0; }
 #tamkeen-account-panel[hidden], .tamkeen-auth-tabs[hidden], #tamkeen-auth-form[hidden], [data-auth-password][hidden] { display: none !important; }
 #tamkeen-auth-feedback { min-height: 1.5em; overflow-wrap: anywhere; }
+
+/* Account quick navigation and signed-in header indicator */
+.account-quick-links { display:flex; flex-wrap:wrap; gap:12px; margin:18px 0; }
+.account-quick-links .button { display:inline-flex; align-items:center; justify-content:center; flex:1 1 180px; text-decoration:none; }
+a.tamkeen-account-signed-in.tool { position:relative; color:#16765d; }
+a.tamkeen-account-signed-in.tool::after { content:""; position:absolute; width:7px; height:7px; border-radius:50%; background:#1caa73; right:1px; top:1px; border:1px solid white; }
+.purchase-history-list { display:grid; gap:16px; margin:24px 0; }
+.purchase-history-card { border:1px solid #b9cddc; background:rgba(255,255,255,.75); border-radius:16px; padding:22px; }
+.purchase-history-card h2 { margin:0 0 10px; font-size:1.2rem; }
+.purchase-history-card p { margin:5px 0; }

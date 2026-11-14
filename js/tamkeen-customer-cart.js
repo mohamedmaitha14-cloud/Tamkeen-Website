@@ -235,6 +235,11 @@
   window.TamkeenCart = {
     ready,
     user,
+    async getPurchaseHistory() {
+      if (!user()) throw new Error("Please sign in to view your purchase history.");
+      if (session.expires_at && Date.now() / 1000 > session.expires_at - 60) await refreshSession();
+      return request("/rest/v1/customer_purchases?select=id,course_id,course_title,amount,currency,purchased_at,payment_status&order=purchased_at.desc", {method:"GET"});
+    },
     login,
     register,
     resetPassword,
