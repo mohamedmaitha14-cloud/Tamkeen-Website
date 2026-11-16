@@ -164,6 +164,21 @@
           row-gap: 12px;
         }
       }
+    
+      /* Personalized signed-in greeting */
+      body[data-page="login"] .account-personal-greeting {
+        font-size: clamp(1.35rem, 2vw, 2rem);
+        line-height: 1.35;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+        margin: 0 0 1rem;
+      }
+      body[data-page="login"] #tamkeen-account-panel:not([hidden]) ~ .account-help {
+        margin-top: 1rem;
+      }
+      body[data-page="login"] .account-details-side:has(#tamkeen-account-panel:not([hidden])) > .account-intro {
+        display: none;
+      }
     </style>
   </head>
   <body data-page="login">
@@ -422,8 +437,10 @@
           <p id="tamkeen-auth-feedback" class="form-feedback" role="status" aria-live="polite"></p>
         </form>
         <div id="tamkeen-account-panel" hidden>
-          <p>Signed in as <strong id="tamkeen-account-email"></strong></p>
-          <p>Your selected programs are saved privately to your account.</p>
+          <h2 class="account-personal-greeting">Welcome back, <span id="tamkeen-account-email"></span>!</h2>
+          <p>We're happy to see you again!</p>
+          <p>Your learning journey continues here. Explore new training opportunities, discover programs that match your ambitions, and take the next step toward your goals.</p>
+          <p>Your selected programs are safely saved to your account, ready whenever you are.</p>
           <button class="button" type="button" id="tamkeen-signout">Sign out</button>
           <div class="account-navigation-grid" aria-label="Account quick links">
             <a class="text-action" href="index.html"><span>Home ↗</span></a>
