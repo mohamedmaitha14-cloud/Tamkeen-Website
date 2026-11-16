@@ -67,6 +67,13 @@
         min-width: 0;
         position: relative;
       }
+      /* Optical alignment: the large heading's font has substantial top leading.
+         Lift its column so visible letters start alongside the left greeting. */
+      @media (min-width: 901px) {
+        body[data-page="login"] .account-welcome-side {
+          transform: translateY(-38px);
+        }
+      }
       /* Keep the heading level with the left-side personal greeting. */
       body[data-page="login"] .account-welcome-side > .kicker {
         position: absolute;
