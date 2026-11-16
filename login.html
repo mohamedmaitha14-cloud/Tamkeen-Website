@@ -67,19 +67,18 @@
         min-width: 0;
         position: relative;
       }
-      /* Optical alignment: the large heading's font has substantial top leading.
-         Lift its column so visible letters start alongside the left greeting. */
-      @media (min-width: 901px) {
-        body[data-page="login"] .account-welcome-side {
-          transform: translateY(-38px);
-        }
+      /* Align the learning-space label with the left greeting, centered above Welcome back. */
+      body[data-page="login"] .account-welcome-title {
+        display: inline-block;
+        max-width: 100%;
+        text-align: center;
+        vertical-align: top;
       }
-      /* Keep the heading level with the left-side personal greeting. */
-      body[data-page="login"] .account-welcome-side > .kicker {
-        position: absolute;
-        bottom: calc(100% + 14px);
-        left: 0;
-        right: 0;
+      body[data-page="login"] .account-welcome-title > .kicker {
+        display: block;
+        position: static;
+        margin: 0 0 14px;
+        text-align: center;
       }
       body[data-page="login"] .account-welcome-side h1 {
         font-size: clamp(5.5rem, 9.5vw, 11rem);
@@ -131,9 +130,7 @@
           grid-column: 1;
           grid-row: 1;
         }
-        body[data-page="login"] .account-welcome-side > .kicker {
-          position: static;
-          display: block;
+        body[data-page="login"] .account-welcome-title > .kicker {
           margin-bottom: 16px;
         }
         body[data-page="login"] .account-welcome-side h1 {
@@ -432,12 +429,14 @@
     <main>
       <section class="utility-hero">
         <div class="account-welcome-side">
-          <span class="kicker"> YOUR LEARNING SPACE </span>
-        <h1>
-          Welcome
-          <br />
-          <em> back. </em>
-        </h1>
+          <div class="account-welcome-title">
+            <span class="kicker">YOUR LEARNING SPACE</span>
+            <h1>
+              Welcome
+              <br />
+              <em>back.</em>
+            </h1>
+          </div>
         </div>
         <div class="account-details-side">
         <p class="account-intro">Sign in to save your selected training programs securely to your account.</p>
